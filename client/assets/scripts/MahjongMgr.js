@@ -12,6 +12,7 @@ cc.Class({
         rightAtlas: {
             default: null,
             type: cc.SpriteAtlas
+            
         },
 
         bottomAtlas: {
