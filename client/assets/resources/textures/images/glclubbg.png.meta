@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "11d17f5e-0ed1-41d5-8bc6-35e8c6ed987e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "glclubbg": {
+      "ver": "1.0.3",
+      "uuid": "70fb78ee-5b40-4280-80b2-91476f947283",
+      "rawTextureUuid": "11d17f5e-0ed1-41d5-8bc6-35e8c6ed987e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1279,
+      "height": 717,
+      "rawWidth": 1279,
+      "rawHeight": 717,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,1 @@
+nohup node ./game_server/app.js ../configs.js &

@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Account",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/account_server/app.js",
+            "args": ["${workspaceRoot}/configs.js"],
+            "cwd": "${workspaceRoot}",
+        },
+        {
+            "name": "Debug Hall",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/hall_server/app.js",
+            "args": ["${workspaceRoot}/configs.js"],
+            "cwd": "${workspaceRoot}",
+        },
+        {
+            "name": "Debug Game",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/game_server/app.js",
+            "args": ["${workspaceRoot}/configs.js"],
+            "cwd": "${workspaceRoot}",
+           
+        },
+    ]
+}

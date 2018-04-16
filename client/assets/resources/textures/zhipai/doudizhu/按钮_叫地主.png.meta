@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "29bab012-2840-4b82-b1a7-d5aaf1a7bcb5",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "按钮_叫地主": {
+      "ver": "1.0.3",
+      "uuid": "620d055f-7559-41b4-8c38-a2648349d368",
+      "rawTextureUuid": "29bab012-2840-4b82-b1a7-d5aaf1a7bcb5",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 121,
+      "height": 43,
+      "rawWidth": 121,
+      "rawHeight": 43,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
