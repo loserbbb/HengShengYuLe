@@ -109,6 +109,8 @@ app.get('/enter_room',function(req,res){
 					http.send(res,998,"you are not in");
 				}else if(ret == 777){
 					http.send(res,777,"system err");
+				}else if(ret == 404){
+					http.send(res,404,"kai qi ding wei");
 				}
 				return;		
 			}

@@ -110,6 +110,10 @@ app.get('/set_location', function (req, res) {
 		x: x,
 		y: y,
 	}
+	if(location.x == 0 && location.y == 0){
+		http.send(res, 404, "failed");
+		return;
+	}
 	location = JSON.stringify(location);
 	console.log(location);
 	db.set_user_location(account, location, function (data) {
@@ -353,6 +357,43 @@ app.get('/add_to_blacklist', function (req, res) {
 
 		} else {
 			http.send(res, 1, "err");
+		}
+	});
+});
+
+app.get('/get_distance_of_others', function(req, res){
+	var data = req.query;
+	if(!check_account(req, res)){
+		return;
+	}
+	var roomid = data.roomId;
+	db.get_room_players(roomid,function(data){
+		if(data!=null && data != false){
+			var usersInRoom = [];
+			usersInRoom.push(data.user_id0);
+			usersInRoom.push(data.user_id1);
+			usersInRoom.push(data.user_id2);
+			usersInRoom.push(data.user_id3);
+			db.get_users_location(usersInRoom,function(data){
+				if(data!=null && data != false){
+					var distances = [];
+					for(var i = 0;i < usersInRoom.length;i++){
+						distances.push(new Array(usersInRoom.length));
+						data[i].location = JSON.parse(data[i].location);
+					}
+					for(var i = 0;i < usersInRoom.length;i++){
+						for(var j = 0;j < usersInRoom.length;j++){
+							distances[i][j] = crypto.calculateDistance(data[i].location,data[j].location);
+						}
+					}
+					// distances = JSON.stringify(distances);
+					http.send(res,0,"ok",{data:distances});
+				}else{
+					http.send(res,1,"data is null");
+				}
+			});
+		}else{
+			http.send(res,1,"data1 is null");
 		}
 	});
 });
@@ -697,12 +738,6 @@ app.get('/create_club', function (req, res) {
 		}
 
 	});
-
-
-
-
-
-
 });
 
 

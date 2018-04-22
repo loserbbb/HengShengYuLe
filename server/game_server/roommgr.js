@@ -428,6 +428,10 @@ exports.enterRoom = function (roomId, userId, userName, callback, gems) {
 			db.get_users_location(usersInRoom, function (data) {
 				if (data && data.length == usersInRoom.length) {
 					var locationOfComer = JSON.parse(data[0].location);
+					if(locationOfComer.x == 0 && locationOfComer.y == 0){
+						callback(404);
+						return;
+					}
 					for (var i = 1; i < data.length; i++) {
 						var locationOfPlayer = JSON.parse(data[i].location);
 						if (calculateDistance(locationOfComer, locationOfPlayer) < 500) {
@@ -470,6 +474,10 @@ exports.enterRoom = function (roomId, userId, userName, callback, gems) {
 					db.get_users_location(usersInRoom, function (data) {
 						if (data && data.length == usersInRoom.length) {
 							var locationOfComer = JSON.parse(data[0].location);
+							if(locationOfComer.x == 0 && locationOfComer.y == 0){
+								callback(404);
+								return;
+							}
 							for (var i = 1; i < data.length; i++) {
 								var locationOfPlayer = JSON.parse(data[i].location);
 								if (calculateDistance(locationOfComer, locationOfPlayer) < 500) {

@@ -847,7 +847,7 @@ exports.add_feedback = function (userid, feedback, callback) {
     if (userid == null || feedback == null) {
         callback(false);
     }
-    var sql = 'INSERT INTO t_feed_back(userid,content) VALUES (' + userid + ',"' + feedback + '")';
+    var sql = 'INSERT INTO t_feed_back(userid,content,date) VALUES (' + userid + ',"' + feedback + '","'+crypto.getNowFormatDate()+'")';
     console.log(sql);
     query(sql, function (err, rows, fields) {
         if (err) {

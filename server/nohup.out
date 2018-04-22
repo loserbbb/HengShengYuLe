@@ -21437,3 +21437,3992 @@ SELECT * FROM t_message WHERE type = "fkgm"
 SELECT t_club.club_id,club_creator,club_name,name,COUNT(user_id) as counter from t_relation,t_club,t_users where t_relation.club_id=t_club.club_id AND t_club.club_creator=t_users.userid GROUP BY club_id HAVING club_id in(select club_id  from t_relation where user_id=100359)  
 SELECT id,base_info,user_id0,user_id1,user_id2,user_id3,user_id3 FROM t_rooms WHERE club_id = 111189 
 SELECT id,base_info,user_id0,user_id1,user_id2,user_id3,user_id3 FROM t_rooms WHERE club_id = 111189 
+account server is listening on 9000
+dealer api is listening on localhost:12581
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server is listening on localhost:9003
+game server is listening on 10000
+game server registered.
+	id:192.168.1.110:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+192.168.1.110:10000
+ad3e2b05dc4b27afa121dd24c460a674
+invalid parameters
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=847500 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "847500"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '847500',
+  sign: '5ff8c3d98fbbb48f7cd54070a96e3021' }
+5ff8c3d98fbbb48f7cd54070a96e3021
+SELECT gems FROM t_users WHERE userid = 100356
+SELECT * FROM t_rooms WHERE id = "847500"
+{ token: 'd843485a0ccb614af86bf334e9addb78',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "847500" WHERE userid = "100356"
+847500
+d843485a0ccb614af86bf334e9addb78
+1523965808094
+abfbdf50d75233cfe8a80823a9766e08
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT gems FROM t_users WHERE account = "guest_2"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=847500 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "847500"
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '847500',
+  sign: '2f9e76cf05602961d66d7d0ad1250929' }
+2f9e76cf05602961d66d7d0ad1250929
+SELECT gems FROM t_users WHERE userid = 100367
+距离0
+{ errcode: 998, errmsg: 'you are not in' }
+you are not in
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT gems FROM t_users WHERE account = "guest_4"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=847500 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "847500"
+{ userid: '100360',
+  name: '夏侯赌侠',
+  roomid: '847500',
+  sign: '6899d9cc8866328721ee62f6a0c1891b' }
+6899d9cc8866328721ee62f6a0c1891b
+SELECT gems FROM t_users WHERE userid = 100360
+距离0
+{ errcode: 998, errmsg: 'you are not in' }
+you are not in
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=847500 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "847500"
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '847500',
+  sign: '4bc5dd52e3498dfe7ad18dbf3404a21f' }
+4bc5dd52e3498dfe7ad18dbf3404a21f
+SELECT gems FROM t_users WHERE userid = 100368
+距离0
+{ errcode: 998, errmsg: 'you are not in' }
+you are not in
+100356			100356
+UPDATE t_users SET roomid = null WHERE userid = "100356"
+DELETE FROM t_rooms WHERE id = '847500'
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+{ account: 'guest_1516885718529',
+  sign: 'f093e905b3cd9f17002df63c2e99536a',
+  conf: '{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"clubId":"","type":"sjmj"}' }
+conf is{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"clubId":"","type":"sjmj"}
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT SUM(creator_cost) AS cost,COUNT(creator_cost) AS roomsNum From t_rooms WHERE creator = "100356"
+club_id is
+{ type: 'sjmj',
+  baseScore: 0.5,
+  jinfen: 1,
+  kunjin: true,
+  jinfengding: 2,
+  maxGames: 4,
+  creator: 100356,
+  paytype: 0,
+  cheat: false,
+  clubId: '' }
+INSERT INTO t_rooms(uuid,id,base_info,ip,port,create_time,creator,creator_cost,club_id)                 VALUES('1523966137629383510','383510','{"type":"sjmj","baseScore":0.5,"jinfen":1,"kunjin":true,"jinfengding":2,"maxGames":4,"creator":100356,"paytype":0,"cheat":false,"clubId":""}','127.0.0.1',10000,1523966138,100356,4,'')
+1523966137629383510
+SELECT ip,port FROM t_rooms WHERE id = "383510"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '383510',
+  sign: 'd78f438dcb70c567e1f31e02a3cdb0ff' }
+d78f438dcb70c567e1f31e02a3cdb0ff
+SELECT gems FROM t_users WHERE userid = 100356
+UPDATE t_rooms SET user_id0 = 100356,user_icon0 = "",user_name0 = "5Lic6YOt5pyJ6ZKx" WHERE id = "383510"
+{ token: '1003828e0663740e17f0bebe4aa08de4',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "383510" WHERE userid = "100356"
+383510
+1003828e0663740e17f0bebe4aa08de4
+1523966137871
+3b44c2d643681f7d01d48b6cc478a3f5
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT gems FROM t_users WHERE account = "guest_2"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=383510 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "383510"
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '383510',
+  sign: 'f0fe19df379d811daf13861ed63c808a' }
+f0fe19df379d811daf13861ed63c808a
+SELECT gems FROM t_users WHERE userid = 100367
+UPDATE t_rooms SET user_id1 = 100367,user_icon1 = "",user_name1 = "5Y2X5a6r6LWM5Zyj" WHERE id = "383510"
+{ token: 'd1e1165274f4c77b39cdea2aeb68d5ba',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "383510" WHERE userid = "100367"
+383510
+d1e1165274f4c77b39cdea2aeb68d5ba
+1523966148629
+4e77b4f1842a8e2f937de03f2727d458
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT gems FROM t_users WHERE account = "guest_4"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=383510 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "383510"
+{ userid: '100360',
+  name: '夏侯赌侠',
+  roomid: '383510',
+  sign: '33c8fe0c9dd11af05d7265723e597d00' }
+33c8fe0c9dd11af05d7265723e597d00
+SELECT gems FROM t_users WHERE userid = 100360
+UPDATE t_rooms SET user_id2 = 100360,user_icon2 = "",user_name2 = "5aSP5L6v6LWM5L6g" WHERE id = "383510"
+{ token: '5b6d35fb61980eba516bccebfce90ffc',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "383510" WHERE userid = "100360"
+383510
+5b6d35fb61980eba516bccebfce90ffc
+1523966154946
+5f3502de3b3baac7a2b1f5bd8045e172
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=383510 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "383510"
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '383510',
+  sign: '9a41d90bc52823fa24da4ee5b0075028' }
+9a41d90bc52823fa24da4ee5b0075028
+SELECT gems FROM t_users WHERE userid = 100368
+UPDATE t_rooms SET user_id3 = 100368,user_icon3 = "",user_name3 = "55qH55Sr6Ieq5pG4" WHERE id = "383510"
+{ token: 'b9173db3ce6091c78cff1d830774d8c4',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "383510" WHERE userid = "100368"
+383510
+b9173db3ce6091c78cff1d830774d8c4
+1523966161599
+744c4440815c60e854bc51582c29d570
+begin start==============383510
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 19
+game_action_push
+begin end=================
+1
+5
+6
+do game over!
+roomid :383510
+roomInfo:[object Object]
+forceEnd :true
+UPDATE t_rooms SET next_button = 1 WHERE id = "383510"
+game_over_push
+UPDATE t_users SET roomid = null WHERE userid = "100356"
+UPDATE t_users SET roomid = null WHERE userid = "100367"
+UPDATE t_users SET roomid = null WHERE userid = "100360"
+UPDATE t_users SET roomid = null WHERE userid = "100368"
+DELETE FROM t_rooms WHERE id = '383510'
+INSERT INTO t_games_archive(SELECT * FROM t_games WHERE room_uuid = '1523966137629383510')
+DELETE FROM t_games WHERE room_uuid = '1523966137629383510'
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+{ account: 'guest_1516885718529',
+  sign: 'f093e905b3cd9f17002df63c2e99536a',
+  conf: '{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"clubId":"","type":"sjmj"}' }
+conf is{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"clubId":"","type":"sjmj"}
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT SUM(creator_cost) AS cost,COUNT(creator_cost) AS roomsNum From t_rooms WHERE creator = "100356"
+club_id is
+{ type: 'sjmj',
+  baseScore: 0.5,
+  jinfen: 1,
+  kunjin: true,
+  jinfengding: 2,
+  maxGames: 4,
+  creator: 100356,
+  paytype: 0,
+  cheat: false,
+  clubId: '' }
+INSERT INTO t_rooms(uuid,id,base_info,ip,port,create_time,creator,creator_cost,club_id)                 VALUES('1523966300079583002','583002','{"type":"sjmj","baseScore":0.5,"jinfen":1,"kunjin":true,"jinfengding":2,"maxGames":4,"creator":100356,"paytype":0,"cheat":false,"clubId":""}','127.0.0.1',10000,1523966301,100356,4,'')
+1523966300079583002
+SELECT ip,port FROM t_rooms WHERE id = "583002"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '583002',
+  sign: '5269019a1671a7b2be3c31c1747f9474' }
+5269019a1671a7b2be3c31c1747f9474
+SELECT gems FROM t_users WHERE userid = 100356
+UPDATE t_rooms SET user_id0 = 100356,user_icon0 = "",user_name0 = "5Lic6YOt5pyJ6ZKx" WHERE id = "583002"
+{ token: '2e116f163e08bff663116bcecd90492c',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "583002" WHERE userid = "100356"
+583002
+2e116f163e08bff663116bcecd90492c
+1523966300265
+4630f1eaf1bb0454d0173c05e6fc56a5
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=583002 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "583002"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '583002',
+  sign: '5269019a1671a7b2be3c31c1747f9474' }
+5269019a1671a7b2be3c31c1747f9474
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: '02fe9cee16fbc1024cd9220f37c14e60',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "583002" WHERE userid = "100356"
+583002
+02fe9cee16fbc1024cd9220f37c14e60
+1523966489342
+80f5642a6327eb3ad5ff030ac2e72dd2
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=583002
+/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/Parser.js:78
+        throw err; // Rethrow non-MySQL errors
+        ^
+
+TypeError: Cannot read property 'user_id0' of undefined
+    at /Users/bin_mac/Documents/workplace/HengShengYuLe/server/hall_server/client_service.js:373:29
+    at /Users/bin_mac/Documents/workplace/HengShengYuLe/server/utils/db.js:431:17
+    at Query._callback (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/utils/db.js:19:17)
+    at Query.Sequence.end (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)
+    at Query._handleFinalResultPacket (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/sequences/Query.js:144:8)
+    at Query.EofPacket (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/sequences/Query.js:128:8)
+    at Protocol._parsePacket (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/Protocol.js:280:23)
+    at Parser.write (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/Parser.js:74:12)
+    at Protocol.write (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/Connection.js:109:28)
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server is listening on localhost:9003
+account server is listening on 9000
+dealer api is listening on localhost:12581
+game server is listening on 10000
+game server registered.
+	id:192.168.1.110:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+192.168.1.110:10000
+ad3e2b05dc4b27afa121dd24c460a674
+invalid parameters
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=583002 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "583002"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '583002',
+  sign: '5269019a1671a7b2be3c31c1747f9474' }
+5269019a1671a7b2be3c31c1747f9474
+SELECT gems FROM t_users WHERE userid = 100356
+SELECT * FROM t_rooms WHERE id = "583002"
+{ token: 'a8bf8c26bea0e4ecc019e73ffca25de9',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "583002" WHERE userid = "100356"
+583002
+a8bf8c26bea0e4ecc019e73ffca25de9
+1523966570392
+a98fc3c1a253f3ca13fbeaf0ea0ffcb5
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT gems FROM t_users WHERE account = "guest_2"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=583002 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "583002"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '583002',
+  sign: '5269019a1671a7b2be3c31c1747f9474' }
+5269019a1671a7b2be3c31c1747f9474
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: '2f05af84af5904e1268d138180df28ac',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "583002" WHERE userid = "100356"
+583002
+2f05af84af5904e1268d138180df28ac
+1523966613067
+589ddeba71bf69f0ded3ad19628ef94c
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=583002 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "583002"
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '583002',
+  sign: 'f3c6143385ac3af732638f571c1cf42f' }
+f3c6143385ac3af732638f571c1cf42f
+SELECT gems FROM t_users WHERE userid = 100367
+UPDATE t_rooms SET user_id1 = 100367,user_icon1 = "",user_name1 = "5Y2X5a6r6LWM5Zyj" WHERE id = "583002"
+{ token: '109f257a338d88ae071ba4d77c1b9468',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "583002" WHERE userid = "100367"
+583002
+109f257a338d88ae071ba4d77c1b9468
+1523966619852
+f3d49855828880bc13d14f51f3d9f69d
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT gems FROM t_users WHERE account = "guest_4"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=583002 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "583002"
+{ userid: '100360',
+  name: '夏侯赌侠',
+  roomid: '583002',
+  sign: '94f48336c5a8be3fe94bc317fd1bd810' }
+94f48336c5a8be3fe94bc317fd1bd810
+SELECT gems FROM t_users WHERE userid = 100360
+UPDATE t_rooms SET user_id2 = 100360,user_icon2 = "",user_name2 = "5aSP5L6v6LWM5L6g" WHERE id = "583002"
+{ token: '503eabc7ff16bd38181640e318a4faca',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "583002" WHERE userid = "100360"
+583002
+503eabc7ff16bd38181640e318a4faca
+1523966628731
+631cc8d7ea85bbbd362353ee77b2d88d
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=583002 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "583002"
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '583002',
+  sign: 'e620560ec586b26cb0f452e1148e103d' }
+e620560ec586b26cb0f452e1148e103d
+SELECT gems FROM t_users WHERE userid = 100368
+UPDATE t_rooms SET user_id3 = 100368,user_icon3 = "",user_name3 = "55qH55Sr6Ieq5pG4" WHERE id = "583002"
+{ token: '8c7b127ec3812b474ca6102eeb1a9eed',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "583002" WHERE userid = "100368"
+583002
+8c7b127ec3812b474ca6102eeb1a9eed
+1523966635181
+e1e5d83a72dcf17ab62ec72de5e8b5ea
+begin start==============583002
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 5
+game_action_push
+begin end=================
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=583002
+/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/Parser.js:78
+        throw err; // Rethrow non-MySQL errors
+        ^
+
+TypeError: Cannot read property 'user_id0' of undefined
+    at /Users/bin_mac/Documents/workplace/HengShengYuLe/server/hall_server/client_service.js:373:29
+    at /Users/bin_mac/Documents/workplace/HengShengYuLe/server/utils/db.js:431:17
+    at Query._callback (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/utils/db.js:19:17)
+    at Query.Sequence.end (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/sequences/Sequence.js:85:24)
+    at Query._handleFinalResultPacket (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/sequences/Query.js:144:8)
+    at Query.EofPacket (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/sequences/Query.js:128:8)
+    at Protocol._parsePacket (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/Protocol.js:280:23)
+    at Parser.write (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/Parser.js:74:12)
+    at Protocol.write (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/mysql/lib/Connection.js:109:28)
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+1
+5
+6
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+do game over!
+roomid :583002
+roomInfo:[object Object]
+forceEnd :true
+UPDATE t_rooms SET next_button = 1 WHERE id = "583002"
+game_over_push
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+UPDATE t_users SET roomid = null WHERE userid = "100356"
+UPDATE t_users SET roomid = null WHERE userid = "100367"
+UPDATE t_users SET roomid = null WHERE userid = "100360"
+UPDATE t_users SET roomid = null WHERE userid = "100368"
+DELETE FROM t_rooms WHERE id = '583002'
+INSERT INTO t_games_archive(SELECT * FROM t_games WHERE room_uuid = '1523966300079583002')
+DELETE FROM t_games WHERE room_uuid = '1523966300079583002'
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+account server is listening on 9000
+dealer api is listening on localhost:12581
+game server is listening on localhost:9003
+game server is listening on 10000
+192.168.1.110:10000
+ad3e2b05dc4b27afa121dd24c460a674
+SELECT SUM(creator_cost) AS cost,COUNT(creator_cost) AS roomsNum From t_rooms WHERE creator = "100356"
+club_id is
+{ type: 'sjmj',
+  baseScore: 0.5,
+  jinfen: 1,
+  kunjin: true,
+  jinfengding: 2,
+  maxGames: 4,
+  creator: 100356,
+  paytype: 0,
+  cheat: false,
+  clubId: '' }
+INSERT INTO t_rooms(uuid,id,base_info,ip,port,create_time,creator,creator_cost,club_id)                 VALUES('1523966991842923874','923874','{"type":"sjmj","baseScore":0.5,"jinfen":1,"kunjin":true,"jinfengding":2,"maxGames":4,"creator":100356,"paytype":0,"cheat":false,"clubId":""}','127.0.0.1',10000,1523966992,100356,4,'')
+1523966991842923874
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '923874',
+  sign: 'c5a58d8ccdd190a31830926e57db78df' }
+c5a58d8ccdd190a31830926e57db78df
+SELECT gems FROM t_users WHERE userid = 100356
+UPDATE t_rooms SET user_id0 = 100356,user_icon0 = "",user_name0 = "5Lic6YOt5pyJ6ZKx" WHERE id = "923874"
+923874
+14bee32e2588f4cdd7d639d2b8255923
+1523966992084
+e40ec126733beab57e6c94373251cae1
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '923874',
+  sign: '813c5406ab9f55f7c10a2154d78551ed' }
+813c5406ab9f55f7c10a2154d78551ed
+SELECT gems FROM t_users WHERE userid = 100367
+UPDATE t_rooms SET user_id1 = 100367,user_icon1 = "",user_name1 = "5Y2X5a6r6LWM5Zyj" WHERE id = "923874"
+923874
+ef83b0845a4ea8e6ddc117a3634197bc
+1523967020484
+532060c758050f4b5fcb5cb1fb1c3d0d
+{ userid: '100360',
+  name: '夏侯赌侠',
+  roomid: '923874',
+  sign: '19a279f6fe9cd249d118282702c43a4d' }
+19a279f6fe9cd249d118282702c43a4d
+SELECT gems FROM t_users WHERE userid = 100360
+UPDATE t_rooms SET user_id2 = 100360,user_icon2 = "",user_name2 = "5aSP5L6v6LWM5L6g" WHERE id = "923874"
+923874
+3ec8bae5aeed443f31d9933d9503bfdf
+1523967027370
+7956ccc0e54287a6c821d5c07a449750
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '923874',
+  sign: '06f4ecdced0020cc4248c2f21a6a0522' }
+06f4ecdced0020cc4248c2f21a6a0522
+SELECT gems FROM t_users WHERE userid = 100368
+UPDATE t_rooms SET user_id3 = 100368,user_icon3 = "",user_name3 = "55qH55Sr6Ieq5pG4" WHERE id = "923874"
+923874
+f3003928abf207db75ea0e5adf753d8d
+1523967033762
+86bfb8b50cf0a4e3a46d2f0ea8887b30
+begin start==============923874
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 11
+game_action_push
+begin end=================
+problem with request: read ECONNRESET
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+1
+5
+6
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+do game over!
+roomid :923874
+roomInfo:[object Object]
+forceEnd :true
+UPDATE t_rooms SET next_button = 1 WHERE id = "923874"
+game_over_push
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+UPDATE t_users SET roomid = null WHERE userid = "100356"
+UPDATE t_users SET roomid = null WHERE userid = "100367"
+UPDATE t_users SET roomid = null WHERE userid = "100360"
+UPDATE t_users SET roomid = null WHERE userid = "100368"
+DELETE FROM t_rooms WHERE id = '923874'
+INSERT INTO t_games_archive(SELECT * FROM t_games WHERE room_uuid = '1523966991842923874')
+DELETE FROM t_games WHERE room_uuid = '1523966991842923874'
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+problem with request: connect ECONNREFUSED 127.0.0.1:9002
+account server is listening on 9000
+dealer api is listening on localhost:12581
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server is listening on localhost:9003
+game server is listening on 10000
+game server registered.
+	id:192.168.1.110:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+192.168.1.110:10000
+ad3e2b05dc4b27afa121dd24c460a674
+invalid parameters
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT gems FROM t_users WHERE account = "guest_4"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT t_club.club_id,club_creator,club_name,name,COUNT(user_id) as counter from t_relation,t_club,t_users where t_relation.club_id=t_club.club_id AND t_club.club_creator=t_users.userid GROUP BY club_id HAVING club_id in(select club_id  from t_relation where user_id=100356)  
+{ account: 'guest_1516885718529',
+  sign: 'f093e905b3cd9f17002df63c2e99536a',
+  conf: '{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"clubId":"","type":"sjmj"}' }
+conf is{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"clubId":"","type":"sjmj"}
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT SUM(creator_cost) AS cost,COUNT(creator_cost) AS roomsNum From t_rooms WHERE creator = "100356"
+club_id is
+{ type: 'sjmj',
+  baseScore: 0.5,
+  jinfen: 1,
+  kunjin: true,
+  jinfengding: 2,
+  maxGames: 4,
+  creator: 100356,
+  paytype: 0,
+  cheat: false,
+  clubId: '' }
+INSERT INTO t_rooms(uuid,id,base_info,ip,port,create_time,creator,creator_cost,club_id)                 VALUES('1523967367321215749','215749','{"type":"sjmj","baseScore":0.5,"jinfen":1,"kunjin":true,"jinfengding":2,"maxGames":4,"creator":100356,"paytype":0,"cheat":false,"clubId":""}','127.0.0.1',10000,1523967368,100356,4,'')
+1523967367321215749
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+UPDATE t_rooms SET user_id0 = 100356,user_icon0 = "",user_name0 = "5Lic6YOt5pyJ6ZKx" WHERE id = "215749"
+{ token: '65ad6a3e321c75ac492fc3dfda3fa402',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+215749
+65ad6a3e321c75ac492fc3dfda3fa402
+1523967367961
+0e2e63298ecda02b1cec3719016ba51d
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT gems FROM t_users WHERE account = "guest_2"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '215749',
+  sign: '4d19ed5c10e83336b7ccc141ec5f1136' }
+4d19ed5c10e83336b7ccc141ec5f1136
+SELECT gems FROM t_users WHERE userid = 100367
+UPDATE t_rooms SET user_id1 = 100367,user_icon1 = "",user_name1 = "5Y2X5a6r6LWM5Zyj" WHERE id = "215749"
+{ token: 'ac92b42d69d25b73848503c28127e280',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100367"
+215749
+ac92b42d69d25b73848503c28127e280
+1523967378164
+f63fd58d825c3c761617c99a5aa86c95
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100360',
+  name: '夏侯赌侠',
+  roomid: '215749',
+  sign: 'c51b2fb5aeb9118f5a35fdfe08f01b94' }
+c51b2fb5aeb9118f5a35fdfe08f01b94
+SELECT gems FROM t_users WHERE userid = 100360
+UPDATE t_rooms SET user_id2 = 100360,user_icon2 = "",user_name2 = "5aSP5L6v6LWM5L6g" WHERE id = "215749"
+{ token: '4488e48be1d4b9ac9b540fa412ef026f',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100360"
+215749
+4488e48be1d4b9ac9b540fa412ef026f
+1523967382577
+6f0c57a546901c5513633a66dc50318f
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '215749',
+  sign: '1aaa73868d79ec6b4ec4891ef501aa29' }
+1aaa73868d79ec6b4ec4891ef501aa29
+SELECT gems FROM t_users WHERE userid = 100368
+UPDATE t_rooms SET user_id3 = 100368,user_icon3 = "",user_name3 = "55qH55Sr6Ieq5pG4" WHERE id = "215749"
+{ token: '9a6bf406d1455d824c80d14600cb5e07',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100368"
+215749
+9a6bf406d1455d824c80d14600cb5e07
+1523967387104
+a72e32fb501f9299d2150ad1e67db6d8
+begin start==============215749
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 21
+game_action_push
+begin end=================
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=215749
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+account server is listening on 9000
+game server is listening on localhost:9003
+dealer api is listening on localhost:12581
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server is listening on 10000
+game server registered.
+	id:192.168.1.110:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+192.168.1.110:10000
+ad3e2b05dc4b27afa121dd24c460a674
+invalid parameters
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '215749',
+  sign: '4d19ed5c10e83336b7ccc141ec5f1136' }
+4d19ed5c10e83336b7ccc141ec5f1136
+SELECT gems FROM t_users WHERE userid = 100367
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+{ userid: '100360',
+  name: '夏侯赌侠',
+  roomid: '215749',
+  sign: 'c51b2fb5aeb9118f5a35fdfe08f01b94' }
+c51b2fb5aeb9118f5a35fdfe08f01b94
+SELECT gems FROM t_users WHERE userid = 100360
+SELECT * FROM t_rooms WHERE id = "215749"
+{ token: '2928c508675c3528a19be65858ab1fec',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100367"
+{ token: '8627c500165215db645468ebe445067c',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100360"
+{ token: 'd9e4b26900c680254b4c15a2286ec86c',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+215749
+8627c500165215db645468ebe445067c
+1523967510029
+23f043a3e46a218a473a4c7a315d51cc
+215749
+d9e4b26900c680254b4c15a2286ec86c
+1523967510027
+5594fe2c35177268a93b380fff974e6a
+215749
+2928c508675c3528a19be65858ab1fec
+1523967510038
+6c7b664959cee2c8c3bf81034d4e0f82
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '215749',
+  sign: '1aaa73868d79ec6b4ec4891ef501aa29' }
+1aaa73868d79ec6b4ec4891ef501aa29
+SELECT gems FROM t_users WHERE userid = 100368
+{ token: '726599bb69153feb40f277413796160c',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100368"
+215749
+726599bb69153feb40f277413796160c
+1523967511730
+369d120b9a0d243e6b356ac05a991b4f
+begin start==============215749
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 20
+game_action_push
+begin end=================
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: '745f47ce0f9de9e8da68340968cfad72',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+SELECT gems FROM t_users WHERE account = "guest_4"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+215749
+745f47ce0f9de9e8da68340968cfad72
+1523967565131
+b867bd1ea17dbce292c43414eb605d96
+game_sync_push
+game_action_push
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=215749
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: 'e47065682165a0be047c39381c67e56a',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+215749
+e47065682165a0be047c39381c67e56a
+1523967739871
+d98a40737d87f0bbaa64f76ec16aad2e
+game_sync_push
+game_action_push
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=215749
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: 'f6e560687f7f2785740e6dd8d65aeb04',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+215749
+f6e560687f7f2785740e6dd8d65aeb04
+1523967939456
+c428cbeb11099d75cb90e61be2c98e34
+game_sync_push
+game_action_push
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=215749
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: '1c3b2cb31afdd1e0642b7d7d69d248e2',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+215749
+1c3b2cb31afdd1e0642b7d7d69d248e2
+1523968120034
+4b8892c347c93b7088f7cee2b83388fd
+game_sync_push
+game_action_push
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=215749
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: '88bfe02a81a6bf9d8c77e31b07084acc',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+215749
+88bfe02a81a6bf9d8c77e31b07084acc
+1523968240186
+5790af1e605a8dc83eb244c2b567ede9
+game_sync_push
+game_action_push
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=215749
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: 'd284a1cfebba2ca49dfc2754b42b8405',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+215749
+d284a1cfebba2ca49dfc2754b42b8405
+1523968318490
+ad6a0994e22ea892ad1b47aebe42c1b4
+game_sync_push
+game_action_push
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=215749
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+game server is listening on localhost:9003
+account server is listening on 9000
+dealer api is listening on localhost:12581
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server is listening on 10000
+game server registered.
+	id:192.168.1.110:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+192.168.1.110:10000
+ad3e2b05dc4b27afa121dd24c460a674
+invalid parameters
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+SELECT * FROM t_rooms WHERE id = "215749"
+{ token: '9c0e5862efc06274620ba354f8e9e15f',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+215749
+9c0e5862efc06274620ba354f8e9e15f
+1523968487245
+98ea4d237d1c9991661920a79651c1f6
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=215749
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: '77362c3b78a98a486ab2822d143f44eb',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+215749
+77362c3b78a98a486ab2822d143f44eb
+1523968556903
+c9ecdc32a95b602f86a7fdac34815c15
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=215749
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+client service is listening on port 9001
+room service is listening on localhost:9002
+account server is listening on 9000
+dealer api is listening on localhost:12581
+game server is listening on localhost:9003
+game server is listening on 10000
+game server registered.
+	id:192.168.1.110:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+192.168.1.110:10000
+ad3e2b05dc4b27afa121dd24c460a674
+invalid parameters
+game server is listening on localhost:9003
+client service is listening on port 9001
+account server is listening on 9000
+room service is listening on localhost:9002
+dealer api is listening on localhost:12581
+game server is listening on 10000
+game server registered.
+	id:10.1.1.108:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+10.1.1.108:10000
+ce0404c09e0b1b5734ae76563dec000c
+invalid parameters
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+SELECT * FROM t_rooms WHERE id = "215749"
+{ token: '4de9e061dc69fc6b6cacdcd389ca7ac5',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+215749
+4de9e061dc69fc6b6cacdcd389ca7ac5
+1523969113098
+a367cebdb06b433aeba3bd817db1efb0
+SELECT gems FROM t_users WHERE account = "guest_2"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT gems FROM t_users WHERE account = "guest_4"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '215749',
+  sign: '1aaa73868d79ec6b4ec4891ef501aa29' }
+1aaa73868d79ec6b4ec4891ef501aa29
+SELECT gems FROM t_users WHERE userid = 100368
+{ token: '3fcb20b4bfb0a2aef88df1d9c5b15c7d',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100368"
+215749
+3fcb20b4bfb0a2aef88df1d9c5b15c7d
+1523969118092
+b12b3b6a42d7a4e58ad02d8773fd58b5
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '215749',
+  sign: '4d19ed5c10e83336b7ccc141ec5f1136' }
+4d19ed5c10e83336b7ccc141ec5f1136
+SELECT gems FROM t_users WHERE userid = 100367
+{ token: 'da2bde3271a85b5ea4200678900e2bca',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100367"
+215749
+da2bde3271a85b5ea4200678900e2bca
+1523969121238
+4a60d26468aa7ddecbbee8ebcf45c4d9
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100360',
+  name: '夏侯赌侠',
+  roomid: '215749',
+  sign: 'c51b2fb5aeb9118f5a35fdfe08f01b94' }
+c51b2fb5aeb9118f5a35fdfe08f01b94
+SELECT gems FROM t_users WHERE userid = 100360
+{ token: '33d1f6a540328cc080b2b67ff68da3f1',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100360"
+215749
+33d1f6a540328cc080b2b67ff68da3f1
+1523969124106
+d3b0f936700f9fdbf9c89f4e492e9e24
+begin start==============215749
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 15
+game_action_push
+begin end=================
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=215749
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+account server is listening on 9000
+dealer api is listening on localhost:12581
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server is listening on localhost:9003
+game server is listening on 10000
+game server registered.
+	id:10.1.1.108:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+10.1.1.108:10000
+ce0404c09e0b1b5734ae76563dec000c
+invalid parameters
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=215749 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "215749"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '215749',
+  sign: '7026af3fa058c5e00582cfae04f239e4' }
+7026af3fa058c5e00582cfae04f239e4
+SELECT gems FROM t_users WHERE userid = 100356
+SELECT * FROM t_rooms WHERE id = "215749"
+{ token: '719943d7464f6c2f7695046bd5daa42e',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "215749" WHERE userid = "100356"
+215749
+719943d7464f6c2f7695046bd5daa42e
+1523969490134
+2bed3faa00c2e4102f017dfa087cb2d6
+100356			100356
+UPDATE t_users SET roomid = null WHERE userid = "100356"
+UPDATE t_users SET roomid = null WHERE userid = "100367"
+UPDATE t_users SET roomid = null WHERE userid = "100360"
+UPDATE t_users SET roomid = null WHERE userid = "100368"
+DELETE FROM t_rooms WHERE id = '215749'
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT * FROM t_message WHERE type = "notice"
+{ account: 'guest_1516885718529',
+  sign: 'c120c2b75bc7cc2a46d3a89867f11fa9',
+  conf: '{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"clubId":"","type":"sjmj"}' }
+conf is{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"clubId":"","type":"sjmj"}
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT SUM(creator_cost) AS cost,COUNT(creator_cost) AS roomsNum From t_rooms WHERE creator = "100356"
+club_id is
+{ type: 'sjmj',
+  baseScore: 0.5,
+  jinfen: 1,
+  kunjin: true,
+  jinfengding: 2,
+  maxGames: 4,
+  creator: 100356,
+  paytype: 0,
+  cheat: false,
+  clubId: '' }
+INSERT INTO t_rooms(uuid,id,base_info,ip,port,create_time,creator,creator_cost,club_id)                 VALUES('1523969497211376960','376960','{"type":"sjmj","baseScore":0.5,"jinfen":1,"kunjin":true,"jinfengding":2,"maxGames":4,"creator":100356,"paytype":0,"cheat":false,"clubId":""}','127.0.0.1',10000,1523969498,100356,4,'')
+1523969497211376960
+SELECT ip,port FROM t_rooms WHERE id = "376960"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '376960',
+  sign: '1051fa9804a1d6acfe9d3d1cf39f2e58' }
+1051fa9804a1d6acfe9d3d1cf39f2e58
+SELECT gems FROM t_users WHERE userid = 100356
+UPDATE t_rooms SET user_id0 = 100356,user_icon0 = "",user_name0 = "5Lic6YOt5pyJ6ZKx" WHERE id = "376960"
+{ token: '1d6e7b424e4addc1c5de3ed6ffd467b6',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "376960" WHERE userid = "100356"
+376960
+1d6e7b424e4addc1c5de3ed6ffd467b6
+1523969497607
+2802a9cdfa82f4fe4c4309d4bf507d04
+100356			100356
+UPDATE t_users SET roomid = null WHERE userid = "100356"
+DELETE FROM t_rooms WHERE id = '376960'
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+{ account: 'guest_1516885718529',
+  sign: 'c120c2b75bc7cc2a46d3a89867f11fa9',
+  conf: '{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":0,"clubId":"","type":"sjmj"}' }
+conf is{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":0,"clubId":"","type":"sjmj"}
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT SUM(creator_cost) AS cost,COUNT(creator_cost) AS roomsNum From t_rooms WHERE creator = "100356"
+club_id is
+{ type: 'sjmj',
+  baseScore: 0.5,
+  jinfen: 1,
+  kunjin: true,
+  jinfengding: 2,
+  maxGames: 4,
+  creator: 100356,
+  paytype: 0,
+  cheat: true,
+  clubId: '' }
+INSERT INTO t_rooms(uuid,id,base_info,ip,port,create_time,creator,creator_cost,club_id)                 VALUES('1523969505715876487','876487','{"type":"sjmj","baseScore":0.5,"jinfen":1,"kunjin":true,"jinfengding":2,"maxGames":4,"creator":100356,"paytype":0,"cheat":true,"clubId":""}','127.0.0.1',10000,1523969506,100356,4,'')
+1523969505715876487
+SELECT ip,port FROM t_rooms WHERE id = "876487"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '876487',
+  sign: '7191db03913391472d67518c666dda33' }
+7191db03913391472d67518c666dda33
+SELECT gems FROM t_users WHERE userid = 100356
+UPDATE t_rooms SET user_id0 = 100356,user_icon0 = "",user_name0 = "5Lic6YOt5pyJ6ZKx" WHERE id = "876487"
+{ token: '6dbae237bd98bdecb982a2f3f4f51b46',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "876487" WHERE userid = "100356"
+876487
+6dbae237bd98bdecb982a2f3f4f51b46
+1523969505962
+9544acc893315afa9ca2779b7616457e
+100356			100356
+UPDATE t_users SET roomid = null WHERE userid = "100356"
+DELETE FROM t_rooms WHERE id = '876487'
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT id,base_info,user_id0,user_id1,user_id2,user_id3,user_id3 FROM t_rooms WHERE creator = "100356"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=411577 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "411577"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '411577',
+  sign: 'f98f1a52d0b6e8ebe596f3eedbac7040' }
+f98f1a52d0b6e8ebe596f3eedbac7040
+SELECT gems FROM t_users WHERE userid = 100356
+SELECT * FROM t_rooms WHERE id = "411577"
+{ token: '908022c092bfda19d17df60dad60487b',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "411577" WHERE userid = "100356"
+411577
+908022c092bfda19d17df60dad60487b
+1523969623930
+7cba41f6bdffe8d14961d1e9e7d89284
+100356			100356
+UPDATE t_users SET roomid = null WHERE userid = "100356"
+DELETE FROM t_rooms WHERE id = '411577'
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+account server is listening on 9000
+dealer api is listening on localhost:12581
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server registered.
+	id:10.1.1.108:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+invalid parameters
+{ account: 'guest_1516885718529',
+  sign: 'c120c2b75bc7cc2a46d3a89867f11fa9',
+  conf: '{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":0,"clubId":"","type":"sjmj"}' }
+conf is{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":0,"clubId":"","type":"sjmj"}
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+{ token: 'a8c7787e4400284882819dcbbbf2fbc1',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "041845" WHERE userid = "100356"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT gems FROM t_users WHERE account = "guest_2"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+{ token: '7c97f0481951d38eda31f98d7085e6fe',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "041845" WHERE userid = "100356"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+problem with request: socket hang up
+{ Error: socket hang up
+    at createHangUpError (_http_client.js:335:15)
+    at Socket.socketOnEnd (_http_client.js:428:23)
+    at Socket.emit (events.js:132:15)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:114:19) code: 'ECONNRESET' }
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+problem with request: socket hang up
+{ Error: socket hang up
+    at createHangUpError (_http_client.js:335:15)
+    at Socket.socketOnEnd (_http_client.js:428:23)
+    at Socket.emit (events.js:132:15)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:114:19) code: 'ECONNRESET' }
+problem with request: socket hang up
+{ Error: socket hang up
+    at createHangUpError (_http_client.js:335:15)
+    at Socket.socketOnEnd (_http_client.js:428:23)
+    at Socket.emit (events.js:132:15)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:114:19) code: 'ECONNRESET' }
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+{ token: '7b856285ca0e9d80e03d315fb365184b',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "041845" WHERE userid = "100356"
+problem with request: socket hang up
+{ Error: socket hang up
+    at createHangUpError (_http_client.js:335:15)
+    at Socket.socketOnEnd (_http_client.js:428:23)
+    at Socket.emit (events.js:132:15)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:114:19) code: 'ECONNRESET' }
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+problem with request: socket hang up
+{ Error: socket hang up
+    at createHangUpError (_http_client.js:335:15)
+    at Socket.socketOnEnd (_http_client.js:428:23)
+    at Socket.emit (events.js:132:15)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:114:19) code: 'ECONNRESET' }
+problem with request: socket hang up
+{ Error: socket hang up
+    at createHangUpError (_http_client.js:335:15)
+    at Socket.socketOnEnd (_http_client.js:428:23)
+    at Socket.emit (events.js:132:15)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:114:19) code: 'ECONNRESET' }
+problem with request: socket hang up
+{ Error: socket hang up
+    at createHangUpError (_http_client.js:335:15)
+    at Socket.socketOnEnd (_http_client.js:428:23)
+    at Socket.emit (events.js:132:15)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:114:19) code: 'ECONNRESET' }
+problem with request: socket hang up
+{ Error: socket hang up
+    at createHangUpError (_http_client.js:335:15)
+    at Socket.socketOnEnd (_http_client.js:428:23)
+    at Socket.emit (events.js:132:15)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:114:19) code: 'ECONNRESET' }
+problem with request: connect ECONNREFUSED 127.0.0.1:9003
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+{ token: '5319079395b6ae9e6ab416232a2d692d',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "041845" WHERE userid = "100356"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+problem with request: socket hang up
+{ Error: socket hang up
+    at createHangUpError (_http_client.js:335:15)
+    at Socket.socketOnEnd (_http_client.js:428:23)
+    at Socket.emit (events.js:132:15)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:114:19) code: 'ECONNRESET' }
+problem with request: connect ECONNREFUSED 127.0.0.1:9003
+problem with request: connect ECONNREFUSED 127.0.0.1:9003
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+{ token: '244d9b936d12787f873ea2991bddbe56',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "041845" WHERE userid = "100356"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+{ errcode: 404, errmsg: 'kai qi ding wei' }
+kai qi ding wei
+problem with request: connect ECONNREFUSED 127.0.0.1:9003
+problem with request: connect ECONNREFUSED 127.0.0.1:9003
+problem with request: connect ECONNREFUSED 127.0.0.1:9003
+problem with request: connect ECONNREFUSED 127.0.0.1:9003
+game server is listening on localhost:9003
+account server is listening on 9000
+dealer api is listening on localhost:12581
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server is listening on 10000
+game server registered.
+	id:192.168.1.116:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+192.168.1.116:10000
+fdc2bc4bd7b8672bcc815668e90b8904
+invalid parameters
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1520231931729"
+SELECT gems FROM t_users WHERE account = "guest_1520231931729"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+{ account: 'guest_1520231931729',
+  sign: 'ad0a547d2eca60d992dc63da937c6d54',
+  conf: '{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"type":"sjmj"}' }
+conf is{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"type":"sjmj"}
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1520231931729"
+SELECT gems FROM t_users WHERE account = "guest_1520231931729"
+SELECT SUM(creator_cost) AS cost,COUNT(creator_cost) AS roomsNum From t_rooms WHERE creator = "100329"
+club_id isundefined
+{ type: 'sjmj',
+  baseScore: 0.5,
+  jinfen: 1,
+  kunjin: true,
+  jinfengding: 2,
+  maxGames: 4,
+  creator: 100329,
+  paytype: 0,
+  cheat: false,
+  clubId: undefined }
+INSERT INTO t_rooms(uuid,id,base_info,ip,port,create_time,creator,creator_cost,club_id)                 VALUES('1524039055150415036','415036','{"type":"sjmj","baseScore":0.5,"jinfen":1,"kunjin":true,"jinfengding":2,"maxGames":4,"creator":100329,"paytype":0,"cheat":false}','127.0.0.1',10000,1524039056,100329,4,'NULL')
+1524039055150415036
+SELECT ip,port FROM t_rooms WHERE id = "415036"
+{ userid: '100329',
+  name: '东阳有钱',
+  roomid: '415036',
+  sign: '21a589c55da72ffa205c8f19b0ef57b6' }
+21a589c55da72ffa205c8f19b0ef57b6
+SELECT gems FROM t_users WHERE userid = 100329
+UPDATE t_rooms SET user_id0 = 100329,user_icon0 = "",user_name0 = "5Lic6Ziz5pyJ6ZKx" WHERE id = "415036"
+{ token: '9d5cb82152e64e9d1a96995c11d91a6e',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "415036" WHERE userid = "100329"
+415036
+9d5cb82152e64e9d1a96995c11d91a6e
+1524039055353
+d00af39acc9d354eb454feeb425216b2
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_uiooiuh"
+SELECT gems FROM t_users WHERE account = "guest_uiooiuh"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_uiooiuh"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=415066 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "415066"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_uiooiuh"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=415036 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "415036"
+{ userid: '100331',
+  name: '长孙赌侠',
+  roomid: '415036',
+  sign: 'c63fb24883a9add7fcce53e7c03093dd' }
+c63fb24883a9add7fcce53e7c03093dd
+SELECT gems FROM t_users WHERE userid = 100331
+UPDATE t_rooms SET user_id1 = 100331,user_icon1 = "",user_name1 = "6ZW/5a2Z6LWM5L6g" WHERE id = "415036"
+{ token: '396b5f9d87137c082b0caa43322542fd',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "415036" WHERE userid = "100331"
+415036
+396b5f9d87137c082b0caa43322542fd
+1524039099278
+2c002eeeead8a274bf8c672f18bf2dab
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_uiooi"
+SELECT gems FROM t_users WHERE account = "guest_uiooi"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_uiooi"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=415036 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "415036"
+{ userid: '100332',
+  name: '上官自摸',
+  roomid: '415036',
+  sign: '712c1dcc4c16f38c13d2d71d082f6912' }
+712c1dcc4c16f38c13d2d71d082f6912
+SELECT gems FROM t_users WHERE userid = 100332
+UPDATE t_rooms SET user_id2 = 100332,user_icon2 = "",user_name2 = "5LiK5a6Y6Ieq5pG4" WHERE id = "415036"
+{ token: '023c3f11a98289396f465ba3f2de7347',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "415036" WHERE userid = "100332"
+415036
+023c3f11a98289396f465ba3f2de7347
+1524039108697
+f5aa3cfcf8b02de0f3bd79fc91a6ed38
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_uio"
+SELECT gems FROM t_users WHERE account = "guest_uio"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_uio"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=415036 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "415036"
+{ userid: '100328',
+  name: '独孤雀圣',
+  roomid: '415036',
+  sign: 'da6f188a938d11ab4ed87a05350c3ce7' }
+da6f188a938d11ab4ed87a05350c3ce7
+SELECT gems FROM t_users WHERE userid = 100328
+UPDATE t_rooms SET user_id3 = 100328,user_icon3 = "",user_name3 = "54us5a2k6ZuA5Zyj" WHERE id = "415036"
+{ token: '0760db7b67bc62acf54ac1303623af21',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "415036" WHERE userid = "100328"
+415036
+0760db7b67bc62acf54ac1303623af21
+1524039114668
+f2e9f7018f8570927d52d24ade796a95
+begin start==============415036
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 28
+game_action_push
+begin end=================
+chupai=========================100329 28
+game_mopai_push
+{}
+Targert is 31
+game_action_push
+chupai=========================100331 32
+game_mopai_push
+{}
+Targert is 7
+game_action_push
+chupai=========================100332 31
+game_mopai_push
+{}
+Targert is 1
+game_action_push
+chupai=========================100328 33
+game_mopai_push
+{}
+Targert is 1
+game_action_push
+chupai=========================100329 33
+game_mopai_push
+{}
+Targert is 32
+game_action_push
+chupai=========================100331 31
+game_mopai_push
+{}
+Targert is 28
+game_action_push
+chupai=========================100332 28
+game_mopai_push
+{}
+Targert is 32
+game_action_push
+chupai=========================100328 29
+game_mopai_push
+{}
+Targert is 22
+game_action_push
+chupai=========================100329 26
+game_mopai_push
+{}
+Targert is 31
+game_action_push
+chupai=========================100331 31
+game_mopai_push
+{}
+Targert is 20
+game_action_push
+chupai=========================100332 2
+game_action_push
+chupai=========================100329 14
+game_mopai_push
+{}
+Targert is 8
+game_action_push
+chupai=========================100331 32
+game_mopai_push
+{}
+Targert is 18
+game_action_push
+chupai=========================100332 18
+game_action_push
+chupai=========================100328 32
+game_mopai_push
+{}
+Targert is 25
+game_action_push
+chupai=========================100329 25
+game_mopai_push
+{}
+Targert is 4
+game_action_push
+chupai=========================100331 28
+game_mopai_push
+{}
+Targert is 32
+game_action_push
+chupai=========================100332 32
+game_mopai_push
+{}
+Targert is 15
+game_action_push
+chupai=========================100328 27
+game_mopai_push
+{}
+Targert is 19
+game_action_push
+chupai=========================100329 15
+game_action_push
+chupai=========================100328 1
+game_mopai_push
+{}
+Targert is 16
+game_action_push
+chupai=========================100329 16
+game_mopai_push
+{}
+Targert is 4
+game_action_push
+gang=============100331       4
+game_mopai_push
+{}
+Targert is 25
+game_action_push
+gang end===================
+chupai=========================100331 29
+game_mopai_push
+{}
+Targert is 12
+game_action_push
+chupai=========================100332 26
+game_mopai_push
+{ '11': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 11
+kunjin:  true
+isMojin: true
+isDajin: undefined
+game_action_push
+chupai=========================100328 22
+game_mopai_push
+{}
+Targert is 6
+game_action_push
+chupai=========================100329 22
+game_mopai_push
+{}
+Targert is 8
+game_action_push
+chupai=========================100331 20
+game_mopai_push
+{}
+Targert is 13
+game_action_push
+chupai=========================100332 10
+game_mopai_push
+{ '22': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 1
+game_action_push
+chupai=========================100328 1
+game_mopai_push
+{}
+Targert is 14
+game_action_push
+chupai=========================100329 14
+game_mopai_push
+{}
+Targert is 5
+game_action_push
+chupai=========================100331 3
+game_mopai_push
+{}
+Targert is 3
+game_action_push
+chupai=========================100332 3
+game_mopai_push
+{ '22': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 10
+game_action_push
+chupai=========================100328 10
+game_mopai_push
+{}
+Targert is 5
+game_action_push
+chupai=========================100329 18
+game_mopai_push
+{}
+Targert is 22
+game_action_push
+chupai=========================100331 22
+game_mopai_push
+{}
+Targert is 0
+game_action_push
+chupai=========================100332 24
+game_mopai_push
+{ '22': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 13
+game_action_push
+chupai=========================100328 13
+game_mopai_push
+{}
+Targert is 27
+game_action_push
+chupai=========================100329 27
+game_mopai_push
+{}
+Targert is 33
+game_action_push
+chupai=========================100331 33
+game_mopai_push
+{}
+Targert is 14
+game_action_push
+chupai=========================100332 17
+game_action_push
+chupai=========================100331 5
+game_action_push
+chupai=========================100329 6
+game_action_push
+chupai=========================100332 0
+game_action_push
+chupai=========================100328 23
+game_mopai_push
+{}
+Targert is 8
+game_action_push
+chupai=========================100329 8
+game_action_push
+gang=============100331       8
+game_mopai_push
+{ '11': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 },
+  '25': { pattern: 'normal', fan: 0 } }
+Targert is 28
+game_action_push
+gang end===================
+chupai=========================100331 28
+game_mopai_push
+{ '7': { pattern: 'normal', fan: 0 },
+  '19': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 },
+  '30': { pattern: 'normal', fan: 0 } }
+Targert is 19
+kunjin:  true
+isMojin: true
+isDajin: true
+game_action_push
+hu==========================100332
+do game over!
+roomid :415036
+roomInfo:[object Object]
+forceEnd :undefined
+========do calculate=======!
+normal
+UPDATE t_rooms SET next_button = 1 WHERE id = "415036"
+INSERT INTO t_games(room_uuid,game_index,base_info,create_time) VALUES('1524039055150415036',0,'{"type":"sjmj","button":0,"index":0,"mahjongs":[2,29,26,27,2,25,31,18,5,28,6,0,18,8,24,29,26,17,6,21,33,32,10,18,0,3,24,0,14,11,2,15,9,20,30,23,7,11,21,33,19,17,7,10,15,4,17,22,10,4,30,9,28,31,7,1,1,32,28,32,22,31,20,8,18,25,4,32,15,19,16,4,25,12,11,6,8,13,1,14,5,3,10,5,22,0,13,27,33,14,8,28,19,24,21,12,9,26,30,20,3,23,13,33,12,25,2,12,21,30,14,3,15,23,6,20,31,9,13,27,26,22,1,29,16,27,19,17,29,5,7,16,24,23,11,16],"jin":[22,24],"game_seats":[[2,2,5,18,26,33,0,14,9,7,19,15,10,28],[29,25,28,8,17,32,3,11,20,11,17,4,4],[26,31,6,24,6,10,24,2,30,21,7,17,30],[27,18,0,29,21,18,0,15,23,33,10,22,9]]}',unix_timestamp(now()))
+UPDATE t_games SET result = '[-4.5,2.5,5.5,-3.5]' WHERE room_uuid = '1524039055150415036' AND game_index = 0
+UPDATE t_games SET action_records = '[0,1,28,1,2,31,1,1,32,2,2,7,2,1,31,3,2,1,3,1,33,0,2,1,0,1,33,1,2,32,1,1,31,2,2,28,2,1,28,3,2,32,3,1,29,0,2,22,0,1,26,1,2,31,1,1,31,2,2,20,2,1,2,0,3,2,0,1,14,1,2,8,1,1,32,2,2,18,2,1,18,3,3,18,3,1,32,0,2,25,0,1,25,1,2,4,1,1,28,2,2,32,2,1,32,3,2,15,3,1,27,0,2,19,0,1,15,3,3,15,3,1,1,0,2,16,0,1,16,1,2,4,1,4,4,1,2,25,1,1,29,2,2,12,2,1,26,3,2,11,3,1,22,0,2,6,0,1,22,1,2,8,1,1,20,2,2,13,2,1,10,3,2,1,3,1,1,0,2,14,0,1,14,1,2,5,1,1,3,2,2,3,2,1,3,3,2,10,3,1,10,0,2,5,0,1,18,1,2,22,1,1,22,2,2,0,2,1,24,3,2,13,3,1,13,0,2,27,0,1,27,1,2,33,1,1,33,2,2,14,2,1,17,1,3,17,1,1,5,0,3,5,0,1,6,2,3,6,2,1,0,3,3,0,3,1,23,0,2,8,0,1,8,1,4,8,1,2,28,1,1,28,2,2,19,2,5,19]' WHERE room_uuid = '1524039055150415036' AND game_index = 0
+UPDATE t_rooms SET num_of_turns = 1 WHERE id = "415036"
+UPDATE t_users SET gems = gems -4 WHERE userid = 100329
+game_over_push
+begin start==============415036
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 25
+game_action_push
+begin end=================
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '041845',
+  sign: '6de0491600373380ef9d6ca2b34d385e' }
+6de0491600373380ef9d6ca2b34d385e
+SELECT gems FROM t_users WHERE userid = 100356
+SELECT * FROM t_rooms WHERE id = "041845"
+{ token: '05b6ef74203968d08877fb6a63309dd2',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "041845" WHERE userid = "100356"
+041845
+05b6ef74203968d08877fb6a63309dd2
+1524040281496
+48027d0cd324e0e5ce94d64207d46bd0
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT gems FROM t_users WHERE account = "guest_2"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT gems FROM t_users WHERE account = "guest_4"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '041845',
+  sign: '631d05ecdfb3b940e4b9cb7f33a61c51' }
+631d05ecdfb3b940e4b9cb7f33a61c51
+SELECT gems FROM t_users WHERE userid = 100367
+{ errcode: 404, errmsg: 'kai qi ding wei' }
+kai qi ding wei
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=041845 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "041845"
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '041845',
+  sign: '631d05ecdfb3b940e4b9cb7f33a61c51' }
+631d05ecdfb3b940e4b9cb7f33a61c51
+SELECT gems FROM t_users WHERE userid = 100367
+{ errcode: 404, errmsg: 'kai qi ding wei' }
+kai qi ding wei
+100356			100356
+UPDATE t_users SET roomid = null WHERE userid = "100356"
+DELETE FROM t_rooms WHERE id = '041845'
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+{ account: 'guest_1516885718529',
+  sign: 'e708e736e1fb3267cafd9d47e65e0d64',
+  conf: '{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"clubId":"","type":"sjmj"}' }
+conf is{"wanfaxuanze":0,"jinfengding":0,"xuanzejushu":0,"paytype":0,"iplimit":0,"difen":0.5,"jinfen":1,"cheat":1,"clubId":"","type":"sjmj"}
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT SUM(creator_cost) AS cost,COUNT(creator_cost) AS roomsNum From t_rooms WHERE creator = "100356"
+club_id is
+{ type: 'sjmj',
+  baseScore: 0.5,
+  jinfen: 1,
+  kunjin: true,
+  jinfengding: 2,
+  maxGames: 4,
+  creator: 100356,
+  paytype: 0,
+  cheat: false,
+  clubId: '' }
+INSERT INTO t_rooms(uuid,id,base_info,ip,port,create_time,creator,creator_cost,club_id)                 VALUES('1524040375425388746','388746','{"type":"sjmj","baseScore":0.5,"jinfen":1,"kunjin":true,"jinfengding":2,"maxGames":4,"creator":100356,"paytype":0,"cheat":false,"clubId":""}','127.0.0.1',10000,1524040376,100356,4,'')
+1524040375425388746
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '388746',
+  sign: '0d39044af203f89958373b25a98f7e7a' }
+0d39044af203f89958373b25a98f7e7a
+SELECT gems FROM t_users WHERE userid = 100356
+UPDATE t_rooms SET user_id0 = 100356,user_icon0 = "",user_name0 = "5Lic6YOt5pyJ6ZKx" WHERE id = "388746"
+{ token: 'd4f8d21dea55083a82eab9176d8bbfeb',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100356"
+388746
+d4f8d21dea55083a82eab9176d8bbfeb
+1524040375651
+d23ee797ed15003ebae70021a861ef5b
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '388746',
+  sign: '82398410bd3ad23f0788aacd10f4f51e' }
+82398410bd3ad23f0788aacd10f4f51e
+SELECT gems FROM t_users WHERE userid = 100367
+UPDATE t_rooms SET user_id1 = 100367,user_icon1 = "",user_name1 = "5Y2X5a6r6LWM5Zyj" WHERE id = "388746"
+{ token: '784275102416f736c97ba2b0679a7518',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100367"
+388746
+784275102416f736c97ba2b0679a7518
+1524040382087
+01c7108e7404c42a45d218e88f663c42
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388846 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388846"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100360',
+  name: '夏侯赌侠',
+  roomid: '388746',
+  sign: 'e86d22ab88e6b4203df3dbc38b03839e' }
+e86d22ab88e6b4203df3dbc38b03839e
+SELECT gems FROM t_users WHERE userid = 100360
+UPDATE t_rooms SET user_id2 = 100360,user_icon2 = "",user_name2 = "5aSP5L6v6LWM5L6g" WHERE id = "388746"
+{ token: '44f5bc11e06c1c2b225add1e98a3ffd5',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100360"
+388746
+44f5bc11e06c1c2b225add1e98a3ffd5
+1524040404990
+7b7f661d114cb2f4fdc9bbe4fec6d85a
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '388746',
+  sign: '8dd0e5c0a000be3208a900ea19bd9886' }
+8dd0e5c0a000be3208a900ea19bd9886
+SELECT gems FROM t_users WHERE userid = 100368
+UPDATE t_rooms SET user_id3 = 100368,user_icon3 = "",user_name3 = "55qH55Sr6Ieq5pG4" WHERE id = "388746"
+{ token: '3c94060f57d4c659909788d57f7ccbc6',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100368"
+388746
+3c94060f57d4c659909788d57f7ccbc6
+1524040409829
+6c9b727641e57008dc2e399c6354b48a
+begin start==============388746
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 29
+game_action_push
+begin end=================
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+chupai=========================100356 6
+game_mopai_push
+{}
+Targert is 18
+game_action_push
+chupai=========================100367 17
+game_action_push
+chupai=========================100356 31
+game_mopai_push
+{}
+Targert is 21
+game_action_push
+chupai=========================100367 33
+game_mopai_push
+{}
+Targert is 7
+game_action_push
+chupai=========================100360 33
+game_mopai_push
+{}
+Targert is 24
+game_action_push
+chupai=========================100368 33
+game_mopai_push
+{}
+Targert is 4
+game_action_push
+chupai=========================100356 32
+game_mopai_push
+{}
+Targert is 24
+game_action_push
+chupai=========================100367 1
+game_mopai_push
+{}
+Targert is 14
+game_action_push
+chupai=========================100360 29
+game_mopai_push
+{}
+Targert is 1
+game_action_push
+chupai=========================100368 27
+game_mopai_push
+{}
+Targert is 0
+game_action_push
+chupai=========================100356 30
+game_mopai_push
+{}
+Targert is 20
+game_action_push
+chupai=========================100367 24
+game_mopai_push
+{}
+Targert is 25
+game_action_push
+chupai=========================100360 29
+game_mopai_push
+{}
+Targert is 13
+game_action_push
+chupai=========================100368 26
+game_mopai_push
+{}
+Targert is 25
+game_action_push
+chupai=========================100356 29
+game_mopai_push
+{}
+Targert is 26
+game_action_push
+chupai=========================100367 4
+game_mopai_push
+{}
+Targert is 28
+game_action_push
+chupai=========================100360 25
+game_mopai_push
+{}
+Targert is 30
+game_action_push
+chupai=========================100368 30
+game_mopai_push
+{}
+Targert is 16
+game_action_push
+chupai=========================100356 27
+game_mopai_push
+{}
+Targert is 12
+game_action_push
+chupai=========================100367 12
+game_mopai_push
+{}
+Targert is 8
+game_action_push
+chupai=========================100360 28
+game_mopai_push
+{}
+Targert is 30
+game_action_push
+chupai=========================100368 6
+game_mopai_push
+{}
+Targert is 3
+game_action_push
+chupai=========================100356 28
+game_mopai_push
+{}
+Targert is 10
+game_action_push
+chupai=========================100367 10
+game_mopai_push
+{}
+Targert is 15
+game_action_push
+chupai=========================100360 28
+game_mopai_push
+{}
+Targert is 33
+game_action_push
+chupai=========================100368 33
+game_mopai_push
+{}
+Targert is 9
+game_action_push
+chupai=========================100356 19
+game_mopai_push
+{}
+Targert is 26
+game_action_push
+chupai=========================100367 21
+game_mopai_push
+{}
+Targert is 4
+game_action_push
+chupai=========================100360 4
+game_mopai_push
+{}
+Targert is 22
+game_action_push
+chupai=========================100368 30
+game_mopai_push
+{}
+Targert is 14
+game_action_push
+chupai=========================100356 9
+game_mopai_push
+{}
+Targert is 25
+game_action_push
+chupai=========================100367 15
+game_action_push
+chupai=========================100360 20
+game_action_push
+gang=============100367       20
+game_mopai_push
+{}
+Targert is 31
+game_action_push
+gang end===================
+chupai=========================100367 31
+game_mopai_push
+{}
+Targert is 0
+game_action_push
+chupai=========================100360 0
+game_action_push
+chupai=========================100356 3
+game_mopai_push
+{}
+Targert is 18
+game_action_push
+chupai=========================100367 9
+game_mopai_push
+{}
+Targert is 11
+game_action_push
+chupai=========================100360 11
+game_mopai_push
+{}
+Targert is 25
+game_action_push
+chupai=========================100368 16
+game_mopai_push
+{ '4': { pattern: 'normal', fan: 0 },
+  '6': { pattern: 'normal', fan: 0 },
+  '12': { pattern: 'normal', fan: 0 },
+  '13': { pattern: 'normal', fan: 0 },
+  '15': { pattern: 'normal', fan: 0 },
+  '16': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 2
+game_action_push
+chupai=========================100356 2
+game_mopai_push
+{}
+Targert is 32
+game_action_push
+chupai=========================100367 32
+game_mopai_push
+{}
+Targert is 32
+game_action_push
+chupai=========================100360 32
+game_mopai_push
+{}
+Targert is 30
+game_action_push
+chupai=========================100368 30
+game_mopai_push
+{ '4': { pattern: 'normal', fan: 0 },
+  '6': { pattern: 'normal', fan: 0 },
+  '12': { pattern: 'normal', fan: 0 },
+  '13': { pattern: 'normal', fan: 0 },
+  '15': { pattern: 'normal', fan: 0 },
+  '16': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 29
+game_action_push
+chupai=========================100356 29
+game_mopai_push
+{}
+Targert is 11
+game_action_push
+chupai=========================100367 25
+game_mopai_push
+{}
+Targert is 18
+game_action_push
+chupai=========================100360 18
+game_action_push
+guo=================================100367
+guo_result
+game_mopai_push
+{}
+Targert is 17
+game_action_push
+guo end=============================
+chupai=========================100368 17
+game_mopai_push
+{ '4': { pattern: 'normal', fan: 0 },
+  '6': { pattern: 'normal', fan: 0 },
+  '12': { pattern: 'normal', fan: 0 },
+  '13': { pattern: 'normal', fan: 0 },
+  '15': { pattern: 'normal', fan: 0 },
+  '16': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 9
+game_action_push
+chupai=========================100356 25
+game_mopai_push
+{}
+Targert is 16
+game_action_push
+chupai=========================100367 16
+game_mopai_push
+{}
+Targert is 16
+game_action_push
+chupai=========================100360 23
+game_mopai_push
+{}
+Targert is 27
+game_action_push
+chupai=========================100368 27
+game_mopai_push
+{}
+Targert is 12
+game_action_push
+chupai=========================100356 23
+game_mopai_push
+{}
+Targert is 8
+game_action_push
+chupai=========================100367 8
+game_mopai_push
+{}
+Targert is 8
+game_action_push
+chupai=========================100360 8
+game_mopai_push
+{}
+Targert is 28
+game_action_push
+chupai=========================100368 12
+game_action_push
+chupai=========================100356 9
+game_mopai_push
+{}
+Targert is 11
+game_action_push
+chupai=========================100367 11
+game_mopai_push
+{}
+Targert is 26
+game_action_push
+chupai=========================100360 26
+game_action_push
+guo=================================100367
+guo_result
+game_mopai_push
+{}
+Targert is 8
+game_action_push
+guo end=============================
+chupai=========================100368 28
+game_mopai_push
+{ '0': { pattern: 'normal', fan: 0 },
+  '1': { pattern: 'normal', fan: 0 },
+  '2': { pattern: 'normal', fan: 0 },
+  '3': { pattern: 'normal', fan: 0 },
+  '4': { pattern: 'normal', fan: 0 },
+  '5': { pattern: 'normal', fan: 0 },
+  '6': { pattern: 'normal', fan: 0 },
+  '7': { pattern: 'normal', fan: 0 },
+  '8': { pattern: 'normal', fan: 0 },
+  '9': { pattern: 'normal', fan: 0 },
+  '10': { pattern: 'normal', fan: 0 },
+  '11': { pattern: 'normal', fan: 0 },
+  '12': { pattern: 'normal', fan: 0 },
+  '13': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '15': { pattern: 'normal', fan: 0 },
+  '16': { pattern: 'normal', fan: 0 },
+  '17': { pattern: 'normal', fan: 0 },
+  '18': { pattern: 'normal', fan: 0 },
+  '19': { pattern: 'normal', fan: 0 },
+  '20': { pattern: 'normal', fan: 0 },
+  '21': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '23': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 },
+  '25': { pattern: 'normal', fan: 0 },
+  '26': { pattern: 'normal', fan: 0 },
+  '27': { pattern: 'normal', fan: 0 },
+  '28': { pattern: 'normal', fan: 0 },
+  '29': { pattern: 'normal', fan: 0 },
+  '30': { pattern: 'normal', fan: 0 },
+  '31': { pattern: 'normal', fan: 0 },
+  '32': { pattern: 'normal', fan: 0 },
+  '33': { pattern: 'normal', fan: 0 } }
+Targert is 27
+kunjin:  true
+isMojin: true
+isDajin: true
+game_action_push
+hu==========================100356
+do game over!
+roomid :388746
+roomInfo:[object Object]
+forceEnd :undefined
+========do calculate=======!
+normal
+INSERT INTO t_games(room_uuid,game_index,base_info,create_time) VALUES('1524040375425388746',0,'{"type":"sjmj","button":0,"index":0,"mahjongs":[0,9,29,23,12,4,29,9,17,22,15,27,19,15,13,33,32,10,20,12,31,7,23,22,27,17,28,16,6,2,14,4,28,20,5,3,6,1,2,7,23,20,23,14,17,19,3,26,30,33,33,6,29,18,21,7,24,4,24,14,1,0,20,25,13,25,26,28,30,16,12,8,30,3,10,15,33,9,26,4,22,14,25,31,0,18,11,25,2,32,32,30,29,11,18,17,9,16,16,27,12,8,8,28,11,26,8,27,31,21,5,5,10,22,32,18,0,1,2,7,24,19,19,3,13,10,1,31,15,11,6,5,21,13,24,21],"jin":[4,6],"game_seats":[[0,12,17,19,32,31,27,6,28,6,23,17,30,29],[9,4,22,15,10,7,17,2,20,1,20,19,33],[29,29,15,13,20,23,28,14,5,2,23,3,33],[23,9,27,33,12,22,16,4,3,7,14,26,6]]}',unix_timestamp(now()))
+UPDATE t_games SET result = '[8.5,-1.5,-3.5,-3.5]' WHERE room_uuid = '1524040375425388746' AND game_index = 0
+UPDATE t_games SET action_records = '[0,1,6,1,2,18,1,1,17,0,3,17,0,1,31,1,2,21,1,1,33,2,2,7,2,1,33,3,2,24,3,1,33,0,2,4,0,1,32,1,2,24,1,1,1,2,2,14,2,1,29,3,2,1,3,1,27,0,2,0,0,1,30,1,2,20,1,1,24,2,2,25,2,1,29,3,2,13,3,1,26,0,2,25,0,1,29,1,2,26,1,1,4,2,2,28,2,1,25,3,2,30,3,1,30,0,2,16,0,1,27,1,2,12,1,1,12,2,2,8,2,1,28,3,2,30,3,1,6,0,2,3,0,1,28,1,2,10,1,1,10,2,2,15,2,1,28,3,2,33,3,1,33,0,2,9,0,1,19,1,2,26,1,1,21,2,2,4,2,1,4,3,2,22,3,1,30,0,2,14,0,1,9,1,2,25,1,1,15,2,3,15,2,1,20,1,4,20,1,2,31,1,1,31,2,2,0,2,1,0,0,3,0,0,1,3,1,2,18,1,1,9,2,2,11,2,1,11,3,2,25,3,1,16,0,2,2,0,1,2,1,2,32,1,1,32,2,2,32,2,1,32,3,2,30,3,1,30,0,2,29,0,1,29,1,2,11,1,1,25,2,2,18,2,1,18,3,2,17,3,1,17,0,2,9,0,1,25,1,2,16,1,1,16,2,2,16,2,1,23,3,2,27,3,1,27,0,2,12,0,1,23,1,2,8,1,1,8,2,2,8,2,1,8,3,2,28,3,1,12,0,3,12,0,1,9,1,2,11,1,1,11,2,2,26,2,1,26,3,2,8,3,1,28,0,2,27,0,5,27]' WHERE room_uuid = '1524040375425388746' AND game_index = 0
+UPDATE t_rooms SET num_of_turns = 1 WHERE id = "388746"
+UPDATE t_users SET gems = gems -4 WHERE userid = 100356
+game_over_push
+begin start==============388746
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 10
+game_action_push
+begin end=================
+chupai=========================100356 29
+game_mopai_push
+{}
+Targert is 12
+game_action_push
+chupai=========================100367 14
+game_mopai_push
+{}
+Targert is 10
+game_action_push
+chupai=========================100360 30
+game_mopai_push
+{}
+Targert is 14
+game_action_push
+chupai=========================100368 14
+game_mopai_push
+{}
+Targert is 19
+game_action_push
+chupai=========================100356 31
+game_mopai_push
+{}
+Targert is 29
+game_action_push
+chupai=========================100367 32
+game_action_push
+chupai=========================100368 27
+game_mopai_push
+{}
+Targert is 30
+game_action_push
+chupai=========================100356 25
+game_mopai_push
+{}
+Targert is 31
+game_action_push
+chupai=========================100367 31
+game_mopai_push
+{}
+Targert is 15
+game_action_push
+chupai=========================100360 11
+game_action_push
+chupai=========================100368 28
+game_action_push
+guo=================================100367
+guo_result
+game_mopai_push
+{}
+Targert is 7
+game_action_push
+guo end=============================
+chupai=========================100356 21
+game_mopai_push
+{}
+Targert is 5
+game_action_push
+chupai=========================100367 20
+game_action_push
+chupai=========================100360 25
+game_mopai_push
+{}
+Targert is 25
+game_action_push
+chupai=========================100368 3
+game_mopai_push
+{}
+Targert is 31
+game_action_push
+chupai=========================100356 31
+game_mopai_push
+{}
+Targert is 21
+game_action_push
+chupai=========================100367 29
+game_mopai_push
+{}
+Targert is 17
+game_action_push
+chupai=========================100360 23
+game_mopai_push
+{}
+Targert is 18
+game_action_push
+chupai=========================100368 15
+game_action_push
+guo=================================100360
+guo_result
+game_mopai_push
+{}
+Targert is 11
+game_action_push
+guo end=============================
+chupai=========================100356 13
+game_mopai_push
+{}
+Targert is 21
+game_action_push
+chupai=========================100367 29
+game_mopai_push
+{}
+Targert is 2
+game_action_push
+chupai=========================100360 10
+game_mopai_push
+{ '12': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '20': { pattern: 'normal', fan: 0 },
+  '23': { pattern: 'normal', fan: 0 },
+  '26': { pattern: 'normal', fan: 0 } }
+Targert is 24
+game_action_push
+chupai=========================100368 25
+game_mopai_push
+{}
+Targert is 26
+game_action_push
+chupai=========================100356 30
+game_mopai_push
+{}
+Targert is 13
+game_action_push
+chupai=========================100367 28
+game_mopai_push
+{}
+Targert is 10
+game_action_push
+chupai=========================100360 7
+game_action_push
+guo=================================100356
+guo_result
+game_mopai_push
+{ '12': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '20': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 8
+game_action_push
+guo end=============================
+chupai=========================100368 8
+game_mopai_push
+{}
+Targert is 10
+game_action_push
+chupai=========================100356 30
+game_mopai_push
+{}
+Targert is 30
+game_action_push
+chupai=========================100367 28
+game_mopai_push
+{}
+Targert is 13
+game_action_push
+chupai=========================100360 10
+game_action_push
+guo=================================100356
+guo_result
+game_mopai_push
+{ '12': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '20': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 33
+game_action_push
+guo end=============================
+chupai=========================100368 33
+game_mopai_push
+{}
+Targert is 31
+game_action_push
+chupai=========================100356 31
+game_mopai_push
+{}
+Targert is 5
+game_action_push
+chupai=========================100367 30
+game_mopai_push
+{}
+Targert is 16
+game_action_push
+chupai=========================100360 16
+game_mopai_push
+{ '12': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '20': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 5
+game_action_push
+chupai=========================100368 5
+game_action_push
+guo=================================100367
+guo_result
+game_mopai_push
+{}
+Targert is 16
+game_action_push
+guo end=============================
+chupai=========================100356 16
+game_mopai_push
+{}
+Targert is 26
+game_action_push
+chupai=========================100367 13
+game_mopai_push
+{}
+Targert is 27
+game_action_push
+chupai=========================100360 27
+game_mopai_push
+{ '12': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '20': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 } }
+Targert is 19
+game_action_push
+chupai=========================100368 18
+game_mopai_push
+{}
+Targert is 20
+game_action_push
+chupai=========================100356 19
+game_action_push
+chupai=========================100368 24
+game_mopai_push
+{}
+Targert is 4
+game_action_push
+chupai=========================100356 4
+game_mopai_push
+{ '5': { pattern: 'normal', fan: 0 },
+  '7': { pattern: 'normal', fan: 0 },
+  '12': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '26': { pattern: 'normal', fan: 0 } }
+Targert is 0
+game_action_push
+chupai=========================100367 0
+game_mopai_push
+{}
+Targert is 9
+game_action_push
+chupai=========================100360 9
+game_mopai_push
+{ '12': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '23': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 },
+  '25': { pattern: 'normal', fan: 0 },
+  '26': { pattern: 'normal', fan: 0 } }
+Targert is 32
+game_action_push
+gang=============100368       32
+game_mopai_push
+{ '12': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '23': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 },
+  '25': { pattern: 'normal', fan: 0 },
+  '26': { pattern: 'normal', fan: 0 } }
+Targert is 18
+game_action_push
+gang end===================
+chupai=========================100368 18
+game_mopai_push
+{}
+Targert is 18
+game_action_push
+chupai=========================100356 26
+game_action_push
+chupai=========================100367 6
+game_mopai_push
+{}
+Targert is 23
+game_action_push
+chupai=========================100360 23
+game_mopai_push
+{ '12': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '23': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 },
+  '25': { pattern: 'normal', fan: 0 },
+  '26': { pattern: 'normal', fan: 0 } }
+Targert is 15
+game_action_push
+chupai=========================100368 15
+game_action_push
+chupai=========================100360 13
+game_mopai_push
+{ '12': { pattern: 'normal', fan: 0 },
+  '14': { pattern: 'normal', fan: 0 },
+  '22': { pattern: 'normal', fan: 0 },
+  '23': { pattern: 'normal', fan: 0 },
+  '24': { pattern: 'normal', fan: 0 },
+  '25': { pattern: 'normal', fan: 0 },
+  '26': { pattern: 'normal', fan: 0 } }
+Targert is 22
+kunjin:  true
+isMojin: true
+isDajin: true
+game_action_push
+hu==========================100368
+do game over!
+roomid :388746
+roomInfo:[object Object]
+forceEnd :undefined
+========do calculate=======!
+normal
+UPDATE t_rooms SET next_button = 1 WHERE id = "388746"
+INSERT INTO t_games(room_uuid,game_index,base_info,create_time) VALUES('1524040375425388746',1,'{"type":"sjmj","button":0,"index":1,"mahjongs":[30,28,1,27,13,20,7,15,19,2,20,11,31,32,30,12,3,21,4,28,17,28,23,19,7,2,20,32,8,29,1,22,25,2,11,22,9,26,25,3,4,6,15,24,21,14,17,11,29,8,6,32,10,12,10,14,19,29,30,31,15,7,5,25,31,21,17,18,11,21,2,24,26,13,10,8,10,30,13,33,31,5,16,5,16,26,27,19,20,4,0,9,32,18,18,23,15,22,27,26,0,8,9,6,23,16,28,1,9,6,17,4,27,0,33,18,24,33,0,5,7,14,3,16,29,22,33,23,12,24,14,3,25,13,12,1],"jin":[12,14],"game_seats":[[30,13,19,31,3,17,7,8,25,9,4,21,29,10],[28,20,2,32,21,28,2,29,2,26,6,14,8],[1,7,20,30,4,23,20,1,11,25,15,17,6],[27,15,11,12,28,19,32,22,22,3,24,11,32]]}',unix_timestamp(now()))
+UPDATE t_games SET result = '[-3.5,-2.5,-2.5,8.5]' WHERE room_uuid = '1524040375425388746' AND game_index = 1
+UPDATE t_games SET action_records = '[0,1,29,1,2,12,1,1,14,2,2,10,2,1,30,3,2,14,3,1,14,0,2,19,0,1,31,1,2,29,1,1,32,3,3,32,3,1,27,0,2,30,0,1,25,1,2,31,1,1,31,2,2,15,2,1,11,3,3,11,3,1,28,0,2,7,0,1,21,1,2,5,1,1,20,2,3,20,2,1,25,3,2,25,3,1,3,0,2,31,0,1,31,1,2,21,1,1,29,2,2,17,2,1,23,3,2,18,3,1,15,0,2,11,0,1,13,1,2,21,1,1,29,2,2,2,2,1,10,3,2,24,3,1,25,0,2,26,0,1,30,1,2,13,1,1,28,2,2,10,2,1,7,3,2,8,3,1,8,0,2,10,0,1,30,1,2,30,1,1,28,2,2,13,2,1,10,3,2,33,3,1,33,0,2,31,0,1,31,1,2,5,1,1,30,2,2,16,2,1,16,3,2,5,3,1,5,0,2,16,0,1,16,1,2,26,1,1,13,2,2,27,2,1,27,3,2,19,3,1,18,0,2,20,0,1,19,3,3,19,3,1,24,0,2,4,0,1,4,1,2,0,1,1,0,2,2,9,2,1,9,3,2,32,3,4,32,3,2,18,3,1,18,0,2,18,0,1,26,1,3,26,1,1,6,2,2,23,2,1,23,3,2,15,3,1,15,2,3,15,2,1,13,3,2,22,3,5,22]' WHERE room_uuid = '1524040375425388746' AND game_index = 1
+UPDATE t_rooms SET num_of_turns = 2 WHERE id = "388746"
+game_over_push
+begin start==============388746
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 5
+game_action_push
+begin end=================
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '388746',
+  sign: '0d39044af203f89958373b25a98f7e7a' }
+0d39044af203f89958373b25a98f7e7a
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: '5a6043fea64c5a924a433baa632e404d',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100356"
+388746
+5a6043fea64c5a924a433baa632e404d
+1524041150193
+9ef45b76c0700ab786db069aa6a4939c
+game_sync_push
+game_action_push
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT gems FROM t_users WHERE account = "guest_2"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT gems FROM t_users WHERE account = "guest_4"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100360',
+  name: '夏侯赌侠',
+  roomid: '388746',
+  sign: 'e86d22ab88e6b4203df3dbc38b03839e' }
+e86d22ab88e6b4203df3dbc38b03839e
+SELECT gems FROM t_users WHERE userid = 100360
+{ token: '03a1f38d82aee405486149ca556e09a5',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100360"
+388746
+03a1f38d82aee405486149ca556e09a5
+1524041153255
+5aab5f677900a66466c16a921ecd192c
+game_sync_push
+game_action_push
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '388746',
+  sign: '8dd0e5c0a000be3208a900ea19bd9886' }
+8dd0e5c0a000be3208a900ea19bd9886
+SELECT gems FROM t_users WHERE userid = 100368
+{ token: '623e88c7f44ddd7c90cf470c71576610',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100368"
+388746
+623e88c7f44ddd7c90cf470c71576610
+1524041155639
+6c7ec08741da4ae039e55a47cc09f58a
+game_sync_push
+game_action_push
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '388746',
+  sign: '8dd0e5c0a000be3208a900ea19bd9886' }
+8dd0e5c0a000be3208a900ea19bd9886
+SELECT gems FROM t_users WHERE userid = 100368
+{ token: '5a7a14c7be19a0d1550c2eb54393180e',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100368"
+388746
+5a7a14c7be19a0d1550c2eb54393180e
+1524041250047
+317f9ca8ef99a1280591a967bee173bf
+game_sync_push
+game_action_push
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+account server is listening on 9000
+dealer api is listening on localhost:12581
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server is listening on localhost:9003
+game server is listening on 10000
+game server registered.
+	id:192.168.1.116:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+192.168.1.116:10000
+fdc2bc4bd7b8672bcc815668e90b8904
+invalid parameters
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100368',
+  name: '皇甫自摸',
+  roomid: '388746',
+  sign: '8dd0e5c0a000be3208a900ea19bd9886' }
+8dd0e5c0a000be3208a900ea19bd9886
+SELECT gems FROM t_users WHERE userid = 100368
+SELECT * FROM t_rooms WHERE id = "388746"
+{ token: '58652dc189d0f0279ffb8def07cc0706',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100368"
+388746
+58652dc189d0f0279ffb8def07cc0706
+1524042687770
+eeea0412919ac4c99ac20af6d308a943
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT gems FROM t_users WHERE account = "guest_4"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_4"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100360',
+  name: '夏侯赌侠',
+  roomid: '388746',
+  sign: 'e86d22ab88e6b4203df3dbc38b03839e' }
+e86d22ab88e6b4203df3dbc38b03839e
+SELECT gems FROM t_users WHERE userid = 100360
+{ token: 'a6774b0cefd51901ae3315aea553f540',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100360"
+388746
+a6774b0cefd51901ae3315aea553f540
+1524042692854
+a96271aa470315148ebdb73bb65fb2e6
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT gems FROM t_users WHERE account = "guest_2"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100367',
+  name: '南宫赌圣',
+  roomid: '388746',
+  sign: '82398410bd3ad23f0788aacd10f4f51e' }
+82398410bd3ad23f0788aacd10f4f51e
+SELECT gems FROM t_users WHERE userid = 100367
+{ token: 'da0412f24b84211e2c9801b0adf0ddc2',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100367"
+388746
+da0412f24b84211e2c9801b0adf0ddc2
+1524042708500
+c6ac5e2e187a64b28bbbd3817376e4a1
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=388746 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "388746"
+{ userid: '100356',
+  name: '东郭有钱',
+  roomid: '388746',
+  sign: '0d39044af203f89958373b25a98f7e7a' }
+0d39044af203f89958373b25a98f7e7a
+SELECT gems FROM t_users WHERE userid = 100356
+{ token: '400a7f66774b056a71a2630aec00f709',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "388746" WHERE userid = "100356"
+388746
+400a7f66774b056a71a2630aec00f709
+1524042710361
+0ab4a9d6042baa92acd7fb41a45ba8f9
+begin start==============388746
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+game_holds_push
+mj_count_push
+game_num_push
+game_begin_push
+{}
+Targert is 31
+game_action_push
+begin end=================
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+距离0
+1
+5
+6
+do game over!
+roomid :388746
+roomInfo:[object Object]
+forceEnd :true
+UPDATE t_rooms SET next_button = 2 WHERE id = "388746"
+game_over_push
+SELECT history FROM t_users WHERE userid = "100356"
+SELECT history FROM t_users WHERE userid = "100367"
+SELECT history FROM t_users WHERE userid = "100360"
+SELECT history FROM t_users WHERE userid = "100368"
+UPDATE t_users SET roomid = null WHERE userid = "100356"
+UPDATE t_users SET roomid = null WHERE userid = "100367"
+UPDATE t_users SET roomid = null WHERE userid = "100360"
+UPDATE t_users SET roomid = null WHERE userid = "100368"
+DELETE FROM t_rooms WHERE id = '388746'
+INSERT INTO t_games_archive(SELECT * FROM t_games WHERE room_uuid = '1524040375425388746')
+1179
+UPDATE t_users SET roomid = null, history = '[{"uuid":"1522655473440895375","id":"895375","time":1522655474,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":-2},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":-1.5},{"userid":100359,"name":"5Lic6Ziz6Ieq5pG4","score":5},{"userid":100358,"name":"56uv5pyo5pyJ6ZKx","score":-1.5}]},{"uuid":"1522655473440895375","id":"895375","time":1522655474,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":-2},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":-1.5},{"userid":100359,"name":"5Lic6Ziz6Ieq5pG4","score":5},{"userid":100358,"name":"56uv5pyo5pyJ6ZKx","score":-1.5}]},{"uuid":"1523242029452707199","id":"707199","time":1523242030,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":6},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":-2},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":-2},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":-2}]},{"uuid":"1523242651091245835","id":"245835","time":1523242652,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":0},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":-3.5},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":0},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":3.5}]},{"uuid":"1524040375425388746","id":"388746","time":1524040376,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":0},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":0},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":0},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":0}]}]' WHERE userid = "100356"
+587
+UPDATE t_users SET roomid = null, history = '[{"uuid":"1523242029452707199","id":"707199","time":1523242030,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":6},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":-2},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":-2},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":-2}]},{"uuid":"1523242651091245835","id":"245835","time":1523242652,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":0},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":-3.5},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":0},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":3.5}]},{"uuid":"1524040375425388746","id":"388746","time":1524040376,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":0},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":0},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":0},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":0}]}]' WHERE userid = "100368"
+587
+UPDATE t_users SET roomid = null, history = '[{"uuid":"1523242029452707199","id":"707199","time":1523242030,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":6},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":-2},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":-2},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":-2}]},{"uuid":"1523242651091245835","id":"245835","time":1523242652,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":0},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":-3.5},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":0},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":3.5}]},{"uuid":"1524040375425388746","id":"388746","time":1524040376,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":0},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":0},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":0},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":0}]}]' WHERE userid = "100367"
+1179
+UPDATE t_users SET roomid = null, history = '[{"uuid":"1522655473440895375","id":"895375","time":1522655474,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":-2},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":-1.5},{"userid":100359,"name":"5Lic6Ziz6Ieq5pG4","score":5},{"userid":100358,"name":"56uv5pyo5pyJ6ZKx","score":-1.5}]},{"uuid":"1522655473440895375","id":"895375","time":1522655474,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":-2},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":-1.5},{"userid":100359,"name":"5Lic6Ziz6Ieq5pG4","score":5},{"userid":100358,"name":"56uv5pyo5pyJ6ZKx","score":-1.5}]},{"uuid":"1523242029452707199","id":"707199","time":1523242030,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":6},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":-2},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":-2},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":-2}]},{"uuid":"1523242651091245835","id":"245835","time":1523242652,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":0},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":-3.5},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":0},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":3.5}]},{"uuid":"1524040375425388746","id":"388746","time":1524040376,"seats":[{"userid":100356,"name":"5Lic6YOt5pyJ6ZKx","score":0},{"userid":100367,"name":"5Y2X5a6r6LWM5Zyj","score":0},{"userid":100360,"name":"5aSP5L6v6LWM5L6g","score":0},{"userid":100368,"name":"55qH55Sr6Ieq5pG4","score":0}]}]' WHERE userid = "100360"
+DELETE FROM t_games WHERE room_uuid = '1524040375425388746'
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT history FROM t_users WHERE userid = "100356"
+1468
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT history FROM t_users WHERE userid = "100356"
+1468
+SELECT game_index,create_time,result FROM t_games_archive WHERE room_uuid = "1524040375425388746"
+[ RowDataPacket {
+    game_index: 0,
+    create_time: 1524040684,
+    result: '[8.5,-1.5,-3.5,-3.5]' },
+  RowDataPacket {
+    game_index: 1,
+    create_time: 1524040957,
+    result: '[-3.5,-2.5,-2.5,8.5]' } ]
+SELECT base_info,action_records FROM t_games_archive WHERE room_uuid = "1524040375425388746" AND game_index = 1
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+SELECT user_name0,user_name1,user_name2,user_name3,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE id=388746
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+account server is listening on 9000
+dealer api is listening on localhost:12581
+events.js:112
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::9000
+    at Server.setupListenHandle [as _listen2] (net.js:1361:14)
+    at listenInCluster (net.js:1402:12)
+    at Server.listen (net.js:1490:7)
+    at Function.listen (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/express/lib/application.js:617:24)
+    at Object.exports.start (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/account_server/account_server.js:19:6)
+    at Object.<anonymous> (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/account_server/app.js:11:4)
+    at Module._compile (module.js:662:30)
+    at Object.Module._extensions..js (module.js:673:10)
+    at Module.load (module.js:575:32)
+    at tryModuleLoad (module.js:515:12)
+client service is listening on port 9001
+room service is listening on localhost:9002
+events.js:112
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::9001
+    at Server.setupListenHandle [as _listen2] (net.js:1361:14)
+    at listenInCluster (net.js:1402:12)
+    at Server.listen (net.js:1490:7)
+    at Function.listen (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/node_modules/express/lib/application.js:617:24)
+    at Object.exports.start (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/hall_server/client_service.js:892:6)
+    at Object.<anonymous> (/Users/bin_mac/Documents/workplace/HengShengYuLe/server/hall_server/app.js:10:16)
+    at Module._compile (module.js:662:30)
+    at Object.Module._extensions..js (module.js:673:10)
+    at Module.load (module.js:575:32)
+    at tryModuleLoad (module.js:515:12)
+account server is listening on 9000
+dealer api is listening on localhost:12581
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server registered.
+	id:192.168.1.115:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+invalid parameters
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT gems FROM t_users WHERE account = "guest_2"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+{ account: 'guest_1516885718529',
+  sign: 'f093e905b3cd9f17002df63c2e99536a',
+  conf: '{"wanfaxuanze":0,"xuanzejushu":0,"paytype":0,"difen":"0.5","cheat":1,"daifeng":0,"clubId":"","type":"bymj"}' }
+conf is{"wanfaxuanze":0,"xuanzejushu":0,"paytype":0,"difen":"0.5","cheat":1,"daifeng":0,"clubId":"","type":"bymj"}
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_1516885718529"
+SELECT gems FROM t_users WHERE account = "guest_1516885718529"
+SELECT ip,port FROM t_rooms WHERE id = "465358"
+{ token: 'a201ef5a7d44e2e70fe45fbfadf679a1',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "465358" WHERE userid = "100356"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_2"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=465358 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "465358"
+{ token: 'ffcd7d9a49378d27d82c961b4c75db60',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "465358" WHERE userid = "100367"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=465358 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "465358"
+{ token: '15f056a399f48a7bd7099249b6075265',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "465358" WHERE userid = "100368"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=465358 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "465358"
+{ token: '3ecea2b9b66fb07780b0a7ba4c495ffe',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "465358" WHERE userid = "100368"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_8"
+端木自摸
+SELECT userid FROM t_users WHERE account = "guest_8"
+INSERT INTO t_users(account,name,coins,gems,sex,headimg,blacklist,location) VALUES('guest_8','56uv5pyo6Ieq5pG4',1000,21,0,null,'[]','{"x":0.0,"y":0.0}')
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_8"
+SELECT gems FROM t_users WHERE account = "guest_8"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_8"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=465358 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "465358"
+{ token: 'bb43325b10d7d059137c30d2ab978160',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "465358" WHERE userid = "100405"
+SELECT gems FROM t_users WHERE account = "guest_6"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_6"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=465358 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "465358"
+{ token: '90c0bf06299577401d2918004f509849',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "465358" WHERE userid = "100368"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_8"
+SELECT gems FROM t_users WHERE account = "guest_8"
+SELECT * FROM t_message WHERE type = "notice"
+SELECT * FROM t_message WHERE type = "fkgm"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_8"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=465358 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "465358"
+{ token: 'b26e92b00d120ff1eda03b43dd2f3e5c',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "465358" WHERE userid = "100405"
+SELECT userid,account,name,lv,exp,coins,gems,roomid FROM t_users WHERE account = "guest_8"
+SELECT blacklist FROM t_users,t_rooms WHERE t_rooms.id=465358 AND t_rooms.creator=t_users.userid
+SELECT ip,port FROM t_rooms WHERE id = "465358"
+{ token: 'd0fe18d800e31f1c7ce2620d0bdff86a',
+  errcode: 0,
+  errmsg: 'ok' }
+UPDATE t_users SET roomid = "465358" WHERE userid = "100405"

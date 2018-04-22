@@ -56,7 +56,7 @@ function debugRecord(pai) {
 function matchSingle(seatData, selected) {
 
 	//分开匹配 A-2,A-1,A
-	if (selected > 27) {
+	if (selected >= 27) {
 		return false;
 	}
 	var matched = true;

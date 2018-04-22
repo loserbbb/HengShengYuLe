@@ -2229,7 +2229,7 @@ exports.dissolveRequest = function(roomId,userId){
     }
 
     roomInfo.dr = {
-        endTime:Date.now() + 30000,
+        endTime:Date.now() + 180000,
         states:[false,false,false,false]
     };
     roomInfo.dr.states[seatIndex] = true;

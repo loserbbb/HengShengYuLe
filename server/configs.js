@@ -1,8 +1,8 @@
 ﻿//var HALL_IP = "192.168.1.157";
-//var HALL_IP = "192.168.1.110";
+var HALL_IP = "192.168.1.115";
 //var HALL_IP = "192.168.1.112";
 //var HALL_IP = "192.168.1.157";
-var HALL_IP = "101.200.52.241";
+//var HALL_IP = "101.200.52.241";
 //var HALL_IP = "192.168.13.80";
 var HALL_CLIENT_PORT = 9001;
 var HALL_ROOM_PORT = 9002;
@@ -14,8 +14,8 @@ var LOCAL_IP = 'localhost';
 
 exports.mysql = function(){
 	return {
-		HOST:'127.0.0.1',
-		//HOST:'101.200.52.241',
+		//HOST:'127.0.0.1',
+		HOST:'101.200.52.241',
 		USER:'root',
 		PSWD:'qipaiyouxi1234.',
 		DB:'nodejs',

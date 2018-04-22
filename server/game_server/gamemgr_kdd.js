@@ -90,11 +90,11 @@ function shuffle(game) {
         mahjongs[index] = mahjongs[lastIndex];
         mahjongs[lastIndex] = t;
     }
-      
-    if(game.conf.fenghaozi==2){
-        game.jin.push(Math.floor(Math.random()*7)+27);
+
+    if (game.conf.fenghaozi == 2) {
+        game.jin.push(Math.floor(Math.random() * 7) + 27);
     }
-    else if(game.conf.fenghaozi==3){
+    else if (game.conf.fenghaozi == 3) {
         var pai = Math.floor(Math.random() * 136);
         game.jin.push(mahjongs[pai]);
 
@@ -292,6 +292,9 @@ function checkCanWanGang(game, seatData) {
 }
 
 function checkCanHu(game, seatData, targetPai) {
+    if (getMJSize(targetPai) <= 2) {
+        return;
+    }
     game.haozi = false;
     if (seatData.guohu) {
         return;
@@ -304,7 +307,7 @@ function checkCanHu(game, seatData, targetPai) {
                 break;
             }
         }
-        if(isJin(game,targetPai) && Object.keys(seatData.tingMap).length > 0){
+        if (isJin(game, targetPai) && Object.keys(seatData.tingMap).length > 0) {
             game.haozi = true;
             seatData.canHu = true;
         }
@@ -368,6 +371,7 @@ function checkCanTingPai(game, seatData) {
         var hu = false;
         var danPai = [];
         var pairCount = 0;
+        var haohua = false;
         for (var k in seatData.countMap) {
             var c = seatData.countMap[k];
             if (c == 2 || c == 3) {
@@ -375,6 +379,7 @@ function checkCanTingPai(game, seatData) {
             }
             else if (c == 4) {
                 pairCount += 2;
+                haohua = true;
             }
 
             if (c == 1 || c == 3) {
@@ -388,16 +393,31 @@ function checkCanTingPai(game, seatData) {
             pairCount += seatData.jinCount;
             if (pairCount == 6) {
                 for (var k = 0; k < danPai.length; k++) {
-                    seatData.tingMap[danPai[k]] = {
-                        fan: 2,
-                        pattern: "7pairs"
-                    };
+                    if (haohua) {
+                        seatData.tingMap[danPai[k]] = {
+                            fan: 4,
+                            pattern: "super7pairs"
+                        };
+                    } else {
+                        seatData.tingMap[danPai[k]] = {
+                            fan: 2,
+                            pattern: "7pairs"
+                        };
+                    }
+
                 }
                 //把金牌给加上
                 for (var i = 0; i < game.jin.length; i++) {
-                    seatData.tingMap[game.jin[i]] = {
-                        fan: 2,
-                        pattern: "7pairs"
+                    if (haohua) {
+                        seatData.tingMap[game.jin[i]] = {
+                            fan: 4,
+                            pattern: "super7pairs"
+                        }
+                    } else {
+                        seatData.tingMap[game.jin[i]] = {
+                            fan: 2,
+                            pattern: "7pairs"
+                        }
                     }
                 }
             }
@@ -406,10 +426,17 @@ function checkCanTingPai(game, seatData) {
             pairCount += danPai.length;
             if (pairCount == 6) {
                 for (var k = 0; k < 34; k++) {
-                    seatData.tingMap[k] = {
-                        fan: 2,
-                        pattern: "7pairs"
-                    };
+                    if (haohua) {
+                        seatData.tingMap[k] = {
+                            fan: 4,
+                            pattern: "super7pairs"
+                        };
+                    } else {
+                        seatData.tingMap[k] = {
+                            fan: 2,
+                            pattern: "7pairs"
+                        };
+                    }
                 }
             }
         }
@@ -599,6 +626,17 @@ function isSameType(type, arr, jin) {
         if (t == -1) {
             continue;
         }
+        //修改
+        var flag = false;
+        for (var j = 0; j < jin.length; j++) {
+            if (arr[i] == jin[j]) {
+                flag = true;
+            }
+        }
+        if (flag) {
+            continue;
+        }
+        //
         if (type != -1 && type != t) {
             return false;
         }
@@ -639,7 +677,7 @@ function isQingYiSe(gameSeatData, jin) {
     }
 
     //检查碰牌
-    if (isSameType(type, gameSeatData.pengs) == false) {
+    if (isSameType(type, gameSeatData.pengs, jin) == false) {
         return false;
     }
     return true;
@@ -683,55 +721,44 @@ function calculateResult(game, roomInfo) {
     }
 
     var huSeat = gs[game.firstHupai];
-    if(huSeat == null){
-        for(var i = 0;i < gs.length;i++){
-            gs[i].score = 0;
-        }
-        return;
-    }
-    console.log("胡牌"+mjutils.getMJName(game.hupai));
     var dian = getMJSize(game.hupai);
-  
-    // if(huSeat.iszimo){
-    //     dian *= 2;
-    // }
 
-    // if(game.haozi){
-    //     var maxDian = 0;
-    //     for(var k in huSeat.tingMap){
-    //         if(parseInt(k) > maxDian){
-    //             maxDian = parseInt(k);
-    //         }
-    //     }
-    //     dian = maxDian;
-    // }
-    //计算胡分
-    huSeat.hufen = dian;
-    if (huSeat.iszimo) {
-        huSeat.hufen *= 2;
-    }
-   
-    huSeat.hufen *= 3;
-    huSeat.hufen *= game.conf.baseScore;
-    if (dianpaoSeat) {
-        if (dianpaoSeat.tinged && game.chuPai >= 0&& (!game.tinging)) {
+    if (huSeat != null) {
+        //计算胡分
+        huSeat.hufen = dian;
+        if (huSeat.iszimo) {
+            huSeat.hufen *= 2;
+        }
+
+        huSeat.hufen *= 3;
+        huSeat.hufen *= game.conf.baseScore;
+        if (dianpaoSeat) {
+            if (dianpaoSeat.tinged && game.chuPai >= 0 && (!game.tinging)) {
+                for (var i = 0; i < gs.length; i++) {
+                    if (i != hu_index) {
+                        gs[i].hufen = - huSeat.hufen / 3;
+                    }
+                }
+            } else {
+                dianpaoSeat.hufen = - huSeat.hufen;
+            }
+        } else {
             for (var i = 0; i < gs.length; i++) {
                 if (i != hu_index) {
                     gs[i].hufen = - huSeat.hufen / 3;
                 }
             }
-        } else {
-            dianpaoSeat.hufen = - huSeat.hufen;
         }
-    } else {
-        for (var i = 0; i < gs.length; i++) {
-            if (i != hu_index) {
-                gs[i].hufen = - huSeat.hufen / 3;
-            }
-        }
+
+        // if (isQingYiSe(huSeat, game.jin)) {
+        //     for (var i = 0; i < game.gameSeats.length; i++) {
+        //         game.gameSeats[i].hufen *= 2;
+        //     }
+        // }
     }
+    
     //计算杠分
-    for(var i = 0;i < 4;i++){
+    for (var i = 0; i < 4; i++) {
         var gsactions = game.gameSeats[i].actions;
         for (var j = 0; j < gsactions.length; j++) {
             if (gsactions[j].type == "angang") {
@@ -742,14 +769,14 @@ function calculateResult(game, roomInfo) {
             }
             if (gsactions[j].type == "diangang" && gsactions[j].targets.length == 1) {
                 dianganger = gsactions[j].targets[0];
-                if (game.gameSeats[dianganger].tinged){
-                    for(var s = 0; s < game.gameSeats.length; s++){
-                        if(s != i){
+                if (game.gameSeats[dianganger].tinged) {
+                    for (var s = 0; s < game.gameSeats.length; s++) {
+                        if (s != i) {
                             game.gameSeats[s].gangfen -= gsactions[j].score;
                         }
                     }
                     game.gameSeats[i].gangfen += gsactions[j].score * 3;
-                }else{
+                } else {
                     console.log(gsactions[j].targets);
                     for (var s = 0; s < gsactions[j].targets.length; s++) {
                         game.gameSeats[gsactions[j].targets[s]].gangfen -= gsactions[j].score * 3;
@@ -1119,7 +1146,7 @@ exports.begin = function (roomId) {
         currentIndex: 0,
         gameSeats: new Array(4),
 
-        jin:[],
+        jin: [],
 
         //numOfQue:0,
         turn: 0,
@@ -1329,10 +1356,10 @@ function doChupai(seatData, pai) {
     seatData.countMap[pai]--;
     game.chuPai = pai;
 
-    if(!game.tinging){
+    if (!game.tinging) {
         recordGameAction(game, seatData.seatIndex, ACTION_CHUPAI, pai);
     }
-    
+
 
     checkCanTingPai(game, seatData);
 
@@ -1351,12 +1378,12 @@ function doChupai(seatData, pai) {
             continue;
         }
         var ddd = game.gameSeats[i];
-        if(!isJin(game,pai)){
+        if (!isJin(game, pai)) {
             if (getMJSize(pai) >= 6) {
                 checkCanHu(game, ddd, pai);
             }
-    
-     
+
+
         }
         checkCanPeng(game, ddd, pai);
         checkCanDianGang(game, ddd, pai);
@@ -1554,9 +1581,9 @@ function doGang(game, turnSeat, seatData, gangtype, numOfCnt, pai) {
     if (gangtype == "angang") {
         seatData.angangs.push(pai);
         var ac = recordUserAction(game, seatData, "angang");
-        if(isJin(game,pai)){
+        if (isJin(game, pai)) {
             ac.score = 40 * game.conf.baseScore;
-        }else{
+        } else {
             ac.score = getMJSize(pai) * 2 * game.conf.baseScore;
         }
     }
@@ -1565,24 +1592,24 @@ function doGang(game, turnSeat, seatData, gangtype, numOfCnt, pai) {
         var fs = turnSeat;
         var ac = recordUserAction(game, seatData, "diangang", fs.seatIndex);
 
-        if(isJin(game,pai)){
+        if (isJin(game, pai)) {
             ac.score = 20 * game.conf.baseScore;
-        }else{
+        } else {
             ac.score = game.conf.baseScore * getMJSize(pai);
         }
-        
+
 
         recordUserAction(game, fs, "fanggang", seatIndex);
     }
     else if (gangtype == "wangang") {
         seatData.wangangs.push(pai);
         var ac = recordUserAction(game, seatData, "wangang");
-        if(isJin(game,pai)){
+        if (isJin(game, pai)) {
             ac.score = 20 * game.conf.baseScore;
-        }else{
+        } else {
             ac.score = game.conf.baseScore * getMJSize(pai);
         }
-       
+
     }
 
     checkCanTingPai(game, seatData);
@@ -1754,6 +1781,17 @@ exports.hu = function (userId) {
 
     var seatIndex = seatData.seatIndex;
     var game = seatData.game;
+
+    //截胡
+    for (var i = (game.turn + 1) % game.gameSeats.length; i < game.turn + game.gameSeats.length; i++) {
+        if (i == seatData.seatIndex) {
+            break;
+        } else {
+            if (game.gameSeats[i % game.gameSeats.length].canHu) {
+                return;
+            }
+        }
+    }
 
     //如果他不能和牌，那和个啥啊
     if (seatData.canHu == false) {
@@ -1960,7 +1998,7 @@ exports.dissolveRequest = function (roomId, userId) {
     }
 
     roomInfo.dr = {
-        endTime: Date.now() + 30000,
+        endTime: Date.now() + 180000,
         states: [false, false, false, false]
     };
     roomInfo.dr.states[seatIndex] = true;
@@ -2020,3 +2058,6 @@ function update() {
 
 setInterval(update, 1000);
 
+exports.checkCanTing = checkCanTing;
+exports.checkCanTingPai = checkCanTingPai;
+exports.isQingYiSe = isQingYiSe;

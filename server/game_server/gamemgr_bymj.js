@@ -1650,6 +1650,16 @@ exports.hu = function (userId) {
     var seatIndex = seatData.seatIndex;
     var game = seatData.game;
 
+    //截胡
+    for(var i = (game.turn + 1) % game.gameSeats.length; i < game.turn + game.gameSeats.length;i++){
+        if(i == seatData.seatIndex){
+            break;
+        }else{
+            if(game.gameSeats[i%game.gameSeats.length].canHu){
+                return;
+            }
+        }
+    }
     //如果他不能和牌，那和个啥啊
     if (seatData.canHu == false) {
         console.log("invalid request.");
@@ -1858,7 +1868,7 @@ exports.dissolveRequest = function (roomId, userId) {
     }
 
     roomInfo.dr = {
-        endTime: Date.now() + 30000,
+        endTime: Date.now() + 180000,
         states: [false, false, false, false]
     };
     roomInfo.dr.states[seatIndex] = true;

@@ -26,5 +26,14 @@
             "cwd": "${workspaceRoot}",
            
         },
+        {
+            "name": "Debug Test",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/game_server/test.js",
+            //"args": ["${workspaceRoot}/configs.js"],
+            "cwd": "${workspaceRoot}",
+           
+        },
     ]
 }
