@@ -1,6 +1,4 @@
 
-//var URL = "http://127.0.0.1:9000";
-//var URL = "http://192.168.13.98:9000";
 //var URL = "http://101.200.52.241:9000";
 var URL = "http://192.168.1.200:9000";
 var HTTP = cc.Class({
