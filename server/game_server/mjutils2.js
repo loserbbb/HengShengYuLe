@@ -21,7 +21,8 @@ function checkTingPai(seatData,begin,end){
 			//平胡 0番
 			seatData.tingMap[i] = {
 				pattern:"normal",
-                fan:0
+				fan:0,
+				num:seatData.shengyu[i],
 			};
 		}
 		
