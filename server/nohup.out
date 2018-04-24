@@ -25426,3 +25426,17 @@ SELECT ip,port FROM t_rooms WHERE id = "465358"
   errcode: 0,
   errmsg: 'ok' }
 UPDATE t_users SET roomid = "465358" WHERE userid = "100405"
+account server is listening on 9000
+dealer api is listening on localhost:12581
+client service is listening on port 9001
+room service is listening on localhost:9002
+game server is listening on localhost:9003
+game server is listening on 10000
+game server registered.
+	id:192.168.1.115:10000
+	addr:127.0.0.1
+	http port:9003
+	socket clientport:10000
+192.168.1.115:10000
+275c26e2e3d09af5da656d7d4c64b7d7
+invalid parameters
