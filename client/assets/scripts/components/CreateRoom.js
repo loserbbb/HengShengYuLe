@@ -141,61 +141,105 @@ cc.Class({
     },
 
     createRoom: function () {
-        if(this.clubid.string.equals("")){
-            var self = this;
-        console.log(self.clubid.string);
-        var onCreate = function (ret) {
-            if (ret.errcode !== 0) {
-                cc.vv.wc.hide();
-                //console.log(ret.errmsg);
-                if (ret.errcode == 2222) {
-                    cc.vv.alert.show("提示", "钻石不足，创建房间失败!");
+        console.log(this.clubid.string);
+        if(this.clubid.string){
+            var onGet=function(ret){
+                if(ret.errcode==0){
+                    cc.vv.alert.show("提示","俱乐部创房规则定制成功");
                 }
-                else {
-                    if(ret.errcode == 4){
-                        cc.vv.alert.show("提示", "您的房间达到上限!");
-                    }else{
-                        cc.vv.alert.show("提示", "创建房间失败,错误码:" + ret.errcode);
-                    }
+                else{
+                    
+                        cc.vv.alert.show("提示","请检查网络");
+                    
                 }
-            }
-            else {
-                cc.vv.gameNetMgr.connectGameServer(ret);
-            }
-        };
+            };
+           
 
-        var type = this.getType();
-        var conf = null;
-        if(type == 'sjmj'){
-            conf = this.constructSJMJConf();
-        }else{
-            if(type == 'djmj'){
+            var type = this.getType();
+            var conf = null;
+            if(type == 'sjmj'){
                 conf = this.constructSJMJConf();
             }else{
-                if(type == 'bymj'){
-                    conf = this.constructBYMJConf();
+                if(type == 'djmj'){
+                    conf = this.constructSJMJConf();
                 }else{
-                    if(type == 'kdd'){
-                        conf = this.constructKDDConf();
+                    if(type == 'bymj'){
+                        conf = this.constructBYMJConf();
+                    }else{
+                        if(type == 'kdd'){
+                            conf = this.constructKDDConf();
+                        }
                     }
                 }
             }
-        }
-        conf.type = type;
-
-        var data = {
-            account: cc.vv.userMgr.account,
-            sign: cc.vv.userMgr.sign,
-            //clubId:self.clubid.string,
-            conf: JSON.stringify(conf)
-            
-        };
-        console.log(data);
-        cc.vv.wc.show("正在创建房间");
-        cc.vv.http.sendRequest("/create_private_room", data, onCreate);
+            conf.type = type;
+    
+            var data = {
+                account: cc.vv.userMgr.account,
+                sign: cc.vv.userMgr.sign,
+                clubId:this.clubid.string,
+                conf: JSON.stringify(conf)
+                
+            };
+            console.log(data);
+            cc.vv.http.sendRequest("/update_club_info", data, onGet);
+           
         }
         else{
-            cc.vv.alert.show("提示","俱乐部创房规则定制成功");
+            var self = this;
+            
+            console.log(self.clubid.string);
+            var onCreate = function (ret) {
+                if (ret.errcode !== 0) {
+                    cc.vv.wc.hide();
+                    //console.log(ret.errmsg);
+                    if (ret.errcode == 2222) {
+                        cc.vv.alert.show("提示", "钻石不足，创建房间失败!");
+                    }
+                    else {
+                        if(ret.errcode == 4){
+                            cc.vv.alert.show("提示", "您的房间达到上限!");
+                        }else{
+                            cc.vv.alert.show("提示", "创建房间失败,错误码:" + ret.errcode);
+                        }
+                    }
+                }
+                else {
+                    cc.vv.gameNetMgr.connectGameServer(ret);
+                }
+            };
+    
+            var type = this.getType();
+            var conf = null;
+            if(type == 'sjmj'){
+                conf = this.constructSJMJConf();
+            }else{
+                if(type == 'djmj'){
+                    conf = this.constructSJMJConf();
+                }else{
+                    if(type == 'bymj'){
+                        conf = this.constructBYMJConf();
+                    }else{
+                        if(type == 'kdd'){
+                            conf = this.constructKDDConf();
+                        }
+                    }
+                }
+            }
+            conf.type = type;
+    
+            var data = {
+                account: cc.vv.userMgr.account,
+                sign: cc.vv.userMgr.sign,
+                //clubId:self.clubid.string,
+                conf: JSON.stringify(conf)
+                
+            };
+            console.log(data);
+            cc.vv.wc.show("正在创建房间");
+            cc.vv.http.sendRequest("/create_private_room", data, onCreate);
+            
+            
         }
         
     },

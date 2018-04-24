@@ -574,12 +574,12 @@ exports.create_room = function (roomId, conf, ip, port, create_time, callback) {
     if (conf.paytype == 1) {
         creator_cost = creator_cost / 4;
     }
-    var clubId="NULL";
-    if(conf.clubId!=null){
-        clubId=conf.clubId;
+    var clubId = "NULL";
+    if (conf.clubId != null) {
+        clubId = conf.clubId;
     }
-    else clubId="NULL";
-    sql = sql.format(uuid, roomId, baseInfo, ip, port, create_time, conf.creator, creator_cost,clubId );
+    else clubId = "NULL";
+    sql = sql.format(uuid, roomId, baseInfo, ip, port, create_time, conf.creator, creator_cost, clubId);
     console.log(sql);
     query(sql, function (err, row, fields) {
         if (err) {
@@ -1011,8 +1011,13 @@ exports.get_user_rooms_cost = function (userId, callback) {
 
 exports.get_user_club_info = function (userId, callback) {
     callback = callback == null ? nop : callback;
-    //name = crypto.fromBase64(name);
-    var sql = 'SELECT t_club.club_id,club_creator,club_name,name,COUNT(user_id) as counter from t_relation,t_club,t_users where t_relation.club_id=t_club.club_id AND t_club.club_creator=t_users.userid GROUP BY club_id HAVING club_id in(select club_id  from t_relation where user_id=' + userId + ')  ';
+    if(userId==null||userId==""){
+        console.log( "userId is"+userId)
+        callback(null);
+    }
+    var sql = 'SELECT t_club.club_id,club_creator,club_name,name,COUNT(user_id) as counter \
+    from t_relation,t_club,t_users where t_relation.club_id=t_club.club_id AND t_club.club_creator=t_users.userid GROUP BY club_id \
+    HAVING club_id in(select club_id  from t_relation where user_id=' + userId + ')  ';
     console.log(sql);
     query(sql, function (err, rows, fields) {
         if (err) {
@@ -1034,16 +1039,93 @@ exports.get_user_club_info = function (userId, callback) {
 
 exports.get_club_rooms_info = function (clubId, callback) {
     callback = callback == null ? nop : callback;
+    if(clubId==null||clubId==""){
+        console.log( "userId is"+clubId)
+        callback(null);
+    }
 
-    var sql = 'SELECT id,base_info,user_id0,user_id1,user_id2,user_id3,user_id3 FROM t_rooms WHERE club_id = ' + clubId + ' ';
+
+    var sql = 'SELECT id,base_info,user_id0,user_id1,user_id2,user_id3 FROM t_rooms WHERE club_id = ' + clubId + ' ';
     console.log(sql);
+
+    var result = [];
     query(sql, function (err, rows, fields) {
         if (err) {
             callback(false);
             throw err;
         } else {
             if (rows.length > 0) {
-                callback(rows);
+                var i = 0;
+                var chaxun = function () {
+                    if (i == rows.length) {
+                        callback(result);
+                    } else {
+                        var str = [];
+                        if (rows[i].user_id0 != null && rows[i].user_id0 != "" && rows[i].user_id0 != 0) {
+                            str.push("'" + rows[i].user_id0 + "'");
+
+                        }
+                        if (rows[i].user_id1 != null && rows[i].user_id1 != "" && rows[i].user_id1 != 0) {
+                            str.push("'" + rows[i].user_id1 + "'");
+                        }
+                        if (rows[i].user_id2 != null && rows[i].user_id2 != "" && rows[i].user_id2 != 0) {
+                            str.push("'" + rows[i].user_id2 + "'");
+
+                        }
+                        if (rows[i].user_id3 != null && rows[i].user_id3 != "" && rows[i].user_id3 != 0) {
+                            str.push("'" + rows[i].user_id3 + "'");
+
+                        }
+
+                        if (str == [] || str.length == 0 || str == null) {
+                            str="'"+ 0 +"'";
+                        }
+                            var sql = "SELECT headimg FROM t_users WHERE userid in(" + str + ")";
+                            console.log(sql);
+                            
+                            query(sql, function (err, rows1, fields) {
+                                if (err) {
+                                    throw err;
+                                } else {
+                                    if (rows1.length >= 1) {
+                                        if (rows1[0].headimg) {
+                                            rows[i].headimg0 = '';
+                                            rows[i].headimg0 += rows1[0].headimg;
+
+                                        }
+                                    }
+                                    if (rows1.length >= 2) {
+                                        if (rows1[1].headimg) {
+                                            rows[i].headimg1 = '';
+                                            rows[i].headimg1 += rows1[1].headimg;
+                                        }
+                                    }
+                                    if (rows1.length >= 3) {
+                                        if (rows1[2].headimg) {
+                                            rows[i].headimg2 = '';
+                                            rows[i].headimg2 += rows1[2].headimg;
+
+                                        }
+                                    }
+                                    if (rows1.length >= 4) {
+                                        if (rows1[3].headimg) {
+                                            rows[i].headimg3 = '';
+                                            rows[i].headimg3 += rows1[3].headimg;
+
+                                        }
+                                    }
+                                    result.push(rows[i]);
+                                    i++;
+                                    chaxun();
+                                }
+                            });
+
+                        
+
+                    }
+                }
+                chaxun();
+
             } else {
                 callback(null);
             }
@@ -1051,11 +1133,13 @@ exports.get_club_rooms_info = function (clubId, callback) {
     });
 
 };
-
-
 exports.is_club_joined = function (userId, clubId, callback) {
     callback = callback == null ? nop : callback;
+    if(userId==""||userId==null||clubId==null||clubId==""){
+        callback(null);
+    }
     var sql = 'SELECT user_id FROM t_relation WHERE (user_id=' + userId + ' AND  club_id=' + clubId + ' )  ';
+    console.log(sql);
     query(sql, function (err, rows, fields) {
         if (err) {
             callback(false);
@@ -1073,6 +1157,7 @@ exports.is_club_joined = function (userId, clubId, callback) {
 exports.is_club_exist = function (clubId, callback) {
     callback = callback == null ? nop : callback;
     var sql = 'SELECT club_id FROM t_club WHERE  club_id = ' + clubId + '  ';
+    console.log(sql);
     query(sql, function (err, rows, fields) {
         if (err) {
             callback(false);
@@ -1105,7 +1190,7 @@ exports.enter_club = function (userId, clubId, callback) {
 exports.create_club = function (clubName, userId, callback) {
     callback = callback == null ? nop : callback;
     var sql = 'INSERT  INTO  t_club  (club_name,club_creator) VALUES ("' + clubName + '" ,  ' + userId + '  ) ';
-
+    console.log(sql);
     query(sql, function (err, row, fields) {
         if (err) {
             callback(null);
@@ -1135,6 +1220,10 @@ exports.quit_club = function (userId, clubId, callback) {
 exports.get_member_info = function (clubId, callback) {
     callback = callback == null ? nop : callback;
     //name = crypto.fromBase64(name);
+    if(clubId==null || clubId==""){
+        console.log("clubId is "+clubId)
+            callback(null);
+    }
     var sql = 'SELECT userid,name FROM t_users WHERE userid in ( SELECT user_id FROM t_relation  WHERE club_id= ' + clubId + ' )';
     console.log(sql);
     query(sql, function (err, rows, fields) {
@@ -1154,7 +1243,7 @@ exports.get_member_info = function (clubId, callback) {
 
 };
 
-exports.delete_club = function(clubId,callback){
+exports.delete_club = function (clubId, callback) {
     callback = callback == null ? nop : callback;
 
     var sql = 'DELETE  FROM  t_club WHERE ( club_id= ' + clubId + ' ) ';
@@ -1169,59 +1258,67 @@ exports.delete_club = function(clubId,callback){
     });
 };
 
+exports.creat_requestlist = function (userId, clubId, callback) {
+    callback = callback == null ? nop : callback;
 
-exports.creat_requestlist=function(userId,clubId,callback){
-    callback = callback == null? nop:callback;
-    
-    var  sql = 'INSERT INTO  t_request (user_id,club_id) VALUES( ' + userId + ' , ' + clubId + ' ) ';
+    var sql = 'INSERT INTO  t_request (user_id,club_id) VALUES( ' + userId + ' , ' + clubId + ' ) ';
     console.log(sql);
-    query(sql,function(err,rows,fields){
-        if(err){
+    query(sql, function (err, rows, fields) {
+        if (err) {
             callback(false);
             throw err;
-        }else{
-            callback(true);
-        }
+        } else {
+             callback(true);
+            }
     });
 };
-exports.get_requestlist=function(clubId,callback){
-    callback = callback == null? nop:callback;
+exports.get_requestlist = function (clubId, callback) {
+    callback = callback == null ? nop : callback;
+    if(clubId==null||clubId==""||clubId==0){
+        callback(null);
+    }
 
-    var sql='SELECT userid , `name`  FROM t_users WHERE userid in( SELECT user_id FROM t_request WHERE club_id= ' + clubId + ' )';
+    var sql = 'SELECT userid , `name`  FROM t_users WHERE userid in( SELECT user_id FROM t_request WHERE club_id= ' + clubId + ' )';
     console.log(sql);
-    query(sql,function(err,rows,fields){
-        if(err){
+    query(sql, function (err, rows, fields) {
+        if (err) {
             callback(false);
             throw err;
-        }else{
-            if(rows.length > 0){
-                for(var i=0;i<rows.length;i++)
-                rows[i].name=crypto.fromBase64(rows[i].name);
+        } else {
+            if (rows.length > 0) {
+                for (var i = 0; i < rows.length; i++)
+                    rows[i].name = crypto.fromBase64(rows[i].name);
                 callback(rows);
-            }else{
+            } else {
                 callback(null);
             }
         }
     });
 
 };
-exports.delete_requestlist=function(userId,clubId,callback){
-    callback = callback == null? nop:callback;
-    
-    var  sql = 'DELETE FROM  t_request WHERE (user_id='+userId+' AND club_id='+clubId+') ';
+exports.delete_requestlist = function (userId, clubId, callback) {
+    callback = callback == null ? nop : callback;
+    if(userId==undefined||userId==null||userId==""||clubId==null||clubId==""||clubId==undefined){
+        callback (false);
+    }
+    var sql = 'DELETE FROM  t_request WHERE (user_id=' + userId + ' AND club_id=' + clubId + ') ';
     console.log(sql);
-    query(sql,function(err,rows,fields){
-        if(err){
+    query(sql, function (err, rows, fields) {
+        if (err) {
             callback(false);
             throw err;
-        }else{
+        } else {
             callback(true);
         }
     });
 };
-exports.is_club_sent=function(userId,clubId,callback){
-    callback = callback == null? nop:callback;
-    var sql='SELECT user_id FROM t_request WHERE (user_id=' + userId + ' AND  club_id=' + clubId +  ' )  ';
+exports.is_club_sent = function (userId, clubId, callback) {
+    callback = callback == null ? nop : callback;
+    if(userId==null ||userId==""||clubId==null||clubId==""){
+        callback(null);
+    }
+    var sql = 'SELECT user_id FROM t_request WHERE (user_id=' + userId + ' AND  club_id=' + clubId + ' )  ';
+    console.log(sql);
     query(sql, function (err, rows, fields) {
         if (err) {
             callback(false);
@@ -1234,6 +1331,86 @@ exports.is_club_sent=function(userId,clubId,callback){
             }
         }
     });
+
+};
+
+exports.update_club_info = function (clubId, conf, clubInfo, callback) {
+    callback = callback == null ? nop : callback;
+
+    var sql = "UPDATE t_club SET club_conf=  '" + conf + "', club_info = '" + clubInfo + " ' WHERE club_id = " + clubId + "";
+    console.log(sql);
+    query(sql, function (err, rows, fields) {
+        if (err) {
+            console.log(err);
+            callback(false);
+            return;
+        }
+        else {
+            callback(rows.affectedRows > 0);
+            return;
+        }
+    });
+
+
+
+};
+
+
+exports.get_club_conf_info = function (clubId, callback) {
+    callback = callback == null ? nop : callback;
+    var sql = 'select club_info from t_club where club_id= ' + clubId + '';
+    console.log(sql);
+    query(sql, function (err, rows, fields) {
+        if (err) {
+            callback(false);
+            throw err;
+        } else {
+            if (rows.length > 0 && rows[0] != null) {
+                callback(rows[0]);
+            } else {
+                callback(false);
+            }
+        }
+    });
+
+};
+exports.get_club_conf = function (clubId, callback) {
+    callback = callback == null ? nop : callback;
+    var sql = 'select club_conf from t_club where club_id= ' + clubId + ' ';
+    console.log(sql);
+
+    query(sql, function (err, rows, fields) {
+        if (err) {
+            callback(false);
+            throw err;
+        } else {
+            if (rows.length > 0 && rows[0] != null) {
+                callback(rows[0]);
+            } else {
+                callback(false);
+            }
+        }
+    });
+};
+
+exports.get_room_club = function (roomId, callback) {
+    callback = callback == null ? nop : callback;
+    var sql = 'select club_id from t_rooms where id= ' + roomId + ' ';
+    console.log(sql);
+
+    query(sql, function (err, rows, fields) {
+        if (err) {
+            callback(false);
+            throw err;
+        } else {
+            if (rows.length > 0 && rows[0] != null) {
+                callback(rows[0]);
+            } else {
+                callback(null);
+            }
+        }
+    });
+
 
 };
 exports.query = query;

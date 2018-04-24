@@ -433,9 +433,16 @@ cc.Class({
             }
             else{
                 self.playEfx(localIndex,"play_hu");
+            }  
+            
+            if(data.iszimo){
+                cc.vv.audioMgr.playSFX("nv/zimo.mp3"); 
+            }
+            else{
+                cc.vv.audioMgr.playSFX("nv/hu.mp3");
             }
             
-            cc.vv.audioMgr.playSFX("nv/hu.mp3");
+           
         });
         
         this.node.on('mj_count',function(data){

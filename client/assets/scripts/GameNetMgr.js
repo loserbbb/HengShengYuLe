@@ -50,6 +50,12 @@ cc.Class({
             this.seats[i].angangs = [];
             this.seats[i].diangangs = [];
             this.seats[i].wangangs = [];
+            this.seats[i].pengedindex = [];
+            this.seats[i].diangangedindex = [];
+            this.seats[i].angangedindex = [];
+            this.seats[i].wangangedindex = [];
+
+
             //this.seats[i].dingque = -1;
             this.seats[i].ready = false;
             this.seats[i].hued = false;
@@ -130,6 +136,7 @@ cc.Class({
             s.diangangs = [];
             s.wangangs = [];
             s.folds = [];
+            s.pengedindex = [];
             console.log(s);
             if (cc.vv.userMgr.userId == s.userid) {
                 this.seatIndex = i;
@@ -340,6 +347,18 @@ cc.Class({
                 if (s.wangangs == null) {
                     s.wangangs = [];
                 }
+                if (s.pengedindex == null) {
+                    s.pengedindex = [];
+                }
+                if(!s.angangedindex){
+                    s.angangedindex =[];
+                }
+                if(!s.wangangedindex){
+                    s.wangangedindex = [];
+                }
+                if(!s.diangangedindex){
+                    s.diangangedindex = [];
+                }
                 s.ready = false;
             }
             self.dispatchEvent('game_holds');
@@ -412,6 +431,8 @@ cc.Class({
                 seat.diangangs = sd.diangangs;
                 seat.wangangs = sd.wangangs;
                 seat.pengs = sd.pengs;
+                seat.pengedindex = sd.pengslist;
+
                 // seat.dingque = sd.que;
                 // seat.hued = sd.hued; 
                 seat.iszimo = sd.iszimo;
@@ -585,8 +606,10 @@ cc.Class({
             console.log(data);
             var userId = data.userid;
             var pai = data.pai;
+            var pengedindex = data.index1;
             var si = self.getSeatIndexByID(userId);
-            self.doPeng(si, data.pai);
+            //self.doPeng(si, data.pai);
+            self.doPeng(si, data.pai,pengedindex);
         });
 
         cc.vv.net.addHandler("gang_notify_push", function (data) {
@@ -595,7 +618,8 @@ cc.Class({
             var userId = data.userid;
             var pai = data.pai;
             var si = self.getSeatIndexByID(userId);
-            self.doGang(si, pai, data.gangtype);
+            var gangedindex = data.index1;
+            self.doGang(si, pai, data.gangtype,gangedindex);
         });
 
         cc.vv.net.addHandler("game_dingque_notify_push", function (data) {
@@ -677,7 +701,7 @@ cc.Class({
         this.dispatchEvent('game_chupai_notify', { seatData: seatData, pai: -2 })
     },
 
-    doPeng: function (seatIndex, pai) {
+    doPeng: function (seatIndex, pai,pengedindex) {
         var seatData = this.seats[seatIndex];
         //移除手牌
         if (seatData.holds) {
@@ -691,11 +715,16 @@ cc.Class({
         var pengs = seatData.pengs;
         pengs.push(pai);
 
+        if(!seatData.pengedindex)
+        seatData.pengedindex = [];
+       seatData.pengedindex.push(pengedindex);
+       console.log("难受"+seatData.pengedindex);   
         this.dispatchEvent('peng_notify', seatData);
     },
 
     getGangType: function (seatData, pai) {
         if (seatData.pengs.indexOf(pai) != -1) {
+
             return "wangang";
         }
         else {
@@ -714,7 +743,7 @@ cc.Class({
         }
     },
 
-    doGang: function (seatIndex, pai, gangtype) {
+    doGang: function (seatIndex, pai, gangtype,gangedindex) {
         var seatData = this.seats[seatIndex];
 
         if (!gangtype) {
@@ -728,6 +757,9 @@ cc.Class({
                     seatData.pengs.splice(idx, 1);
                 }
             }
+            if(!seatData.wangangedindex)
+            seatData.wangangedindex = [];
+           seatData.wangangedindex.push(gangedindex);
             seatData.wangangs.push(pai);
         }
         if (seatData.holds) {
@@ -742,9 +774,17 @@ cc.Class({
         }
         if (gangtype == "angang") {
             seatData.angangs.push(pai);
+
+            if(!seatData.angangedindex)
+            seatData.angangedindex = [];
+           seatData.angangedindex.push(gangedindex);
         }
         else if (gangtype == "diangang") {
             seatData.diangangs.push(pai);
+
+            if(!seatData.diangangedindex)
+            seatData.diangangedindex = [];
+           seatData.diangangedindex.push(gangedindex);
         }
         this.dispatchEvent('gang_notify', { seatData: seatData, gangtype: gangtype });
     },
