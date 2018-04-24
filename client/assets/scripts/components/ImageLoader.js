@@ -91,7 +91,7 @@ cc.Class({
         if(cc.vv.images == null){
             cc.vv.images = {};
         }
-        
+        console("headimg"+userid);
         var self = this;
         getBaseInfo(userid,function(code,info){
            if(info && info.url){
@@ -110,9 +110,20 @@ cc.Class({
                 spr.spriteFrame = this._spriteFrame;    
             }
         }
-    }
+    },
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 
     // },
+    getclubroomimg:function(headimg){
+        var self=this;
+        loadImage(headimg,function(code,info){  
+                    self._spriteFrame = spriteFrame;
+                    self.setupSpriteFrame();
+                });   
+        },
+
+
+
+
 });

@@ -46,6 +46,9 @@ cc.Class({
                 if(ret.errcode == 999){
                     content = "您处于该房间房主黑名单列表中!";
                 }
+                if(ret.errcode==555){
+                    content="您不能加入俱乐部专属房间！"
+                }
                 cc.vv.alert.show("提示",content);
                 this.onResetClicked();
             }

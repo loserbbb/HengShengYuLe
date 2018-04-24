@@ -23,6 +23,7 @@ cc.Class({
         btnReturnGame: cc.Node,
         sprHeadImg: cc.Sprite,
         roominfo: cc.Prefab,
+        kefuWin:cc.Node,
 
         heimingdan: cc.Node,
        // club_Win:cc.Node,
@@ -368,6 +369,13 @@ cc.Class({
 
         this.fankuiWin.active = true;
     },
+   
+    onBtnkefu:function(){
+        this.kefuWin.active=true;
+    },
+    onBtnkefuclose:function(){
+        this.kefuWin.active=false;
+    },
     onBtnZhuanzengClicked: function () {
         this.zhuanzengWin.active = true;
     },
@@ -383,7 +391,7 @@ cc.Class({
             return;
         }
         console.log("onCreateRoomClicked");
-    // if(cc.sys.os==cc.sys.ANDROID)
+     if(cc.sys.os==cc.sys.ANDROID)
             cc.vv.anysdkMgr.getLocation();
  
         this.createRoomWin.active = true;
@@ -421,22 +429,6 @@ cc.Class({
 
 
         
-        // this.second++;
-        // if (this.second%500 >= 500){
-        //     console.log("===================second is"+this.second);
-        // }
-        
-        // if (this.second >= 500) {
-        //     if (cc.vv.userMgr.latitude == 0) {
-
-        //         this.second = 0;
-        //         cc.vv.anysdkMgr.getLocation();
-        //         console.log("!!!!!!!!!request!!!!!!!!!")
-
-        //     }
-            
-        // }
-
 
         var x = this.lblNotice.node.x;
         x -= dt * 100;
